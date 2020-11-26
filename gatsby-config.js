@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'Yoon can do it'
+  },
   /* Your site config here */
   plugins: [
     {

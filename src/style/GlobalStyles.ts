@@ -27,6 +27,9 @@ const GlobalStyles = createGlobalStyle`
    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
   }
   
+  html {
+    overflow-y: scroll;
+  }
   html, body, .markdown-body {
     font-family: NanumBarunGothic, sans-serif;
   }

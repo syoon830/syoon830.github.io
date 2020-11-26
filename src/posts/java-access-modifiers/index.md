@@ -9,7 +9,7 @@ date: "2020-08-28 20:00"
 
 모든 클래스에서 사용가능 (다른 패키지 포함)
 
-```
+```java
 // fruit/Apple.java
 public class Apple {
     public String name = "사과";
@@ -39,13 +39,13 @@ public class Carrot {
 }
 ```
 
-[##_Image|kage@bcTbLA/btqHAo6bL96/14WkETgmUIc1c8uUbPr5qK/img.png|alignCenter|data-origin-width="0.0" data-origin-height="0.0" data-ke-mobilestyle="widthContent"|||_##]
+![](./1.png)
 
 ### default
 
 해당 패키지 내 클래스에서만 사용가능
 
-```
+```java
 // fruit/Apple.java
 public class Apple {
     String name = "사과"; // (default 생략 가능)
@@ -75,13 +75,13 @@ public class Carrot {
 }
 ```
 
-[##_Image|kage@dRVfg8/btqHvKviI0m/HGPHZ2PVV21Zw29y5cwac1/img.png|alignCenter|data-origin-width="0.0" data-origin-height="0.0" data-ke-mobilestyle="widthContent"|||_##]
+![](./2.png)
 
 ### private
 
 같은 클래스에서만 사용가능
 
-```
+```java
 // fruit/Apple.java
 public class Apple {
     private String name = "사과"; 
@@ -111,13 +111,13 @@ public class Carrot {
 }
 ```
 
-[##_Image|kage@d5SWLh/btqHxcLVzqB/okl5aGpuDkTzRAOFWLGEHK/img.png|alignCenter|data-origin-width="754.0" data-origin-height="548.0" data-ke-mobilestyle="widthContent"|||_##]
+![](./3.png)
 
 ### protected
 
 같은 패키지 내 클래스는 접근 가능. 다른 패키지 내 클래스는 조건부 접근 가능 (확장하여)
 
-```
+```java
 // fruit/Apple.java
 public class Apple {
     protected String name = "사과"; 
@@ -163,4 +163,4 @@ public class Carrot extends Apple {
 }
 ```
 
-[##_Image|kage@bR6lv3/btqHvBMlBLh/QL3AuzZZwZEwIfKlpMuFY1/img.png|alignCenter|data-origin-width="0.0" data-origin-height="0.0" data-ke-mobilestyle="widthContent"|||_##]
+![](./4.png)

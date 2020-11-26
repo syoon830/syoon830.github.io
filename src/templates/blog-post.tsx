@@ -10,7 +10,6 @@ type DataType = {
     html: string;
     frontmatter: {
       date: string;
-      description: string;
       title: string;
     }
   }
@@ -64,19 +63,13 @@ export const pageQuery = graphql`
     $previousPostId: String
     $nextPostId: String
   ) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        description
+        date(formatString: "YYYY.MM.DD")
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
