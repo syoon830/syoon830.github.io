@@ -1,6 +1,7 @@
 import React from "react"
 import {graphql, Link, useStaticQuery} from "gatsby"
 import { SiteHeader, SiteHeaderInner } from './styled';
+import {Helmet} from "react-helmet";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -16,6 +17,7 @@ const Header = () => {
   return (
     <SiteHeader>
       <SiteHeaderInner>
+        <Helmet />
         <Link
           to="/"
         >
@@ -25,6 +27,5 @@ const Header = () => {
     </SiteHeader>
   )
 }
-
 
 export default Header
