@@ -10,15 +10,15 @@ date: "2020-10-09 20:21"
 각 자바 기본 타입에는 일치하는 Wrapper Class가 있다.
 
 | 기본 타입 | Wrapper Class |
-| :------- | :------------ |
-| boolean  | Boolean       |
-| byte     | Byte          |
-| short    | Short         |
-| char     | Character     |
-| int      | Integer       |
-| long     | Long          |
-| float    | Float         |
-| double   | Double        |
+| :-------- | :------------ |
+| boolean   | Boolean       |
+| byte      | Byte          |
+| short     | Short         |
+| char      | Character     |
+| int       | Integer       |
+| long      | Long          |
+| float     | Float         |
+| double    | Double        |
 
 ---
 

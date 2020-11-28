@@ -84,7 +84,7 @@ public class Carrot {
 ```java
 // fruit/Apple.java
 public class Apple {
-    private String name = "사과"; 
+    private String name = "사과";
 }
 
 // fruit/Pear.java (Apple.java name에 접근불가)
@@ -120,7 +120,7 @@ public class Carrot {
 ```java
 // fruit/Apple.java
 public class Apple {
-    protected String name = "사과"; 
+    protected String name = "사과";
 }
 
 // fruit/Pear.java (Apple.java name에 접근가능)
@@ -146,7 +146,7 @@ public class Pimeto extends Apple {
         System.out.println(apple.name); // "사과"
     }
 }
-// vegetable/Carrot.java 
+// vegetable/Carrot.java
 // Apple.java name에 직접적으로 접근은 불가
 public class Carrot {
     public static void main(String[] args) {

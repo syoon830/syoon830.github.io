@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Yoon can do it'
+    title: "seungyoon Kim",
   },
   plugins: [
     {
@@ -8,13 +8,6 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts/`,
       },
     },
     {
@@ -27,12 +20,19 @@ module.exports = {
               maxWidth: 630,
             },
           },
-          `gatsby-remark-prismjs`
+          `gatsby-remark-prismjs`,
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-MQ7V225",
+        includeInDevelopment: false,
       },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
   ],
 }

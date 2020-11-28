@@ -1,22 +1,18 @@
-import React, {ReactNode} from "react"
+import React, { ReactNode } from "react"
 
-import Header from "./header";
-import GlobalStyles from "../style/GlobalStyles";
-import { Content } from './styled';
+import Header from "./header"
+import GlobalStyles from "../style/GlobalStyles"
 
 type Props = {
   children: ReactNode
 }
 
 const Layout = ({ children }: Props) => {
-
   return (
     <>
       <GlobalStyles />
       <Header />
-      <Content>
-        {children}
-      </Content>
+      <div>{children}</div>
     </>
   )
 }
