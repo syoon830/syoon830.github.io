@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
+import { StyledHeader } from "../style/Styles"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -14,12 +15,10 @@ const Header = () => {
   `)
 
   return (
-    <div>
-      <div>
-        <Helmet />
-        <Link to="/">{data.site.siteMetadata.title}</Link>
-      </div>
-    </div>
+    <StyledHeader>
+      <Helmet />
+      <Link to="/">{data.site.siteMetadata.title}</Link>
+    </StyledHeader>
   )
 }
 

@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { PageProps } from "gatsby"
 import Layout from "../components/layout"
+import { StyledPostListWrap } from "../style/Styles"
 
 type DataType = {
   allContentfulBlogPost: {
@@ -19,16 +20,16 @@ const Index = ({ data }: PageProps<DataType>) => {
   const posts = data.allContentfulBlogPost.edges
   return (
     <Layout>
-      <ul>
+      <StyledPostListWrap>
         {posts.map(post => (
           <li key={post.node.slug}>
             <Link to={post.node.slug} itemProp="url">
-              <span>{post.node.title}</span>
-              <span>{post.node.publishedDate}</span>
+              <span className="title">{post.node.title}</span>
+              <span className="date">{post.node.publishedDate}</span>
             </Link>
           </li>
         ))}
-      </ul>
+      </StyledPostListWrap>
     </Layout>
   )
 }

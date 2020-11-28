@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { PageProps } from "gatsby"
 import Layout from "../components/layout"
+import { StyledPost } from "../style/Styles"
 
 type DataType = {
   contentfulBlogPost: {
@@ -22,16 +23,18 @@ const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
   const content = post.body.childMarkdownRemark.html
   return (
     <Layout>
-      <div>
-        <div>{title}</div>
-        <div>{date}</div>
+      <StyledPost>
+        <div className="post-header">
+          <div className="title">{title}</div>
+          <div className="date">{date}</div>
+        </div>
         <div className="markdown-body">
           <section
             dangerouslySetInnerHTML={{ __html: content }}
             itemProp="articleBody"
           />
         </div>
-      </div>
+      </StyledPost>
     </Layout>
   )
 }

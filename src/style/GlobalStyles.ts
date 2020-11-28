@@ -2,36 +2,17 @@ import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
 
 const GlobalStyles = createGlobalStyle`
-  //@font-face {
-  // font-family: 'NanumBarunGothic';
-  // font-style: normal;
-  // font-weight: 400;
-  // src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
-  // src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
-  //}
-  //
-  //@font-face {
-  // font-family: 'NanumBarunGothic';
-  // font-style: normal;
-  // font-weight: 700;
-  // src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
-  // src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
-  //}
-  //
-  //@font-face {
-  // font-family: 'NanumBarunGothic';
-  // font-style: normal;
-  // font-weight: 300;
-  // src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
-  // src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
-  //}
-  //
-  //html {
-  //  overflow-y: scroll;
-  //}
-  //html, body, .markdown-body {
-  //  font-family: NanumBarunGothic, sans-serif;
-  //}
+  ${reset}
+  body {
+    background-color: #f5f5f5;
+  }
+  body, .markdown-body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  a {
+    color: #333;
+    text-decoration: none;
+  }
 `
 
 export default GlobalStyles

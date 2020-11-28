@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "seungyoon Kim",
+    title: "seungyoonkim",
   },
   plugins: [
     {
@@ -34,5 +34,16 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Noto Sans KR"],
+        },
+        typekit: {
+          id: "pfn4qds",
+        },
+      },
+    },
   ],
 }
