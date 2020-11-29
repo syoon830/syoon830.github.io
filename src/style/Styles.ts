@@ -57,6 +57,7 @@ const StyledPost = styled.div`
     .date {
       font-size: 14px;
       text-align: right;
+      color: #b3aaaa;
     }
   }
 `

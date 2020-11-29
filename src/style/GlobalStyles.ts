@@ -4,6 +4,7 @@ import reset from "styled-reset"
 const GlobalStyles = createGlobalStyle`
   ${reset}
   body {
+    overflow-y: scroll;
     background-color: #f5f5f5;
   }
   body, .markdown-body {
