@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { PageProps } from "gatsby"
 import Layout from "../components/layout"
 import { StyledPost } from "../style/Styles"
+import Utterances from "../components/utterances"
 
 type DataType = {
   contentfulBlogPost: {
@@ -34,6 +35,7 @@ const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
             itemProp="articleBody"
           />
         </div>
+        <Utterances repo="syoon830/blog" />
       </StyledPost>
     </Layout>
   )
