@@ -21,13 +21,16 @@ const StyledHeader = styled.header`
     padding: 20px 0;
   }
 
-  a {
+  h1 a {
     font-size: 24px;
     letter-spacing: -0.02em;
     font-family: acumin-pro, sans-serif;
   }
 `
 
+const StyledCategories = styled.div`
+  font-size: 12px;
+`
 const StyledPostListWrap = styled.ul`
   padding: 20px 0;
   li {
@@ -66,6 +69,7 @@ export {
   StyledWrap,
   StyledContent,
   StyledHeader,
+  StyledCategories,
   StyledPostListWrap,
   StyledPost,
 }

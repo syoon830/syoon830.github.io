@@ -37,8 +37,11 @@ const Index = ({ data }: PageProps<DataType>) => {
 export default Index
 
 export const pageQuery = graphql`
-  query {
-    allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+  query($categories: String) {
+    allContentfulBlogPost(
+      sort: { fields: publishedDate, order: DESC }
+      filter: { categories: { eq: $categories } }
+    ) {
       edges {
         node {
           title

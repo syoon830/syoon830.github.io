@@ -3,7 +3,9 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
-  const result = await graphql(
+  const indexPage = path.resolve(`./src/pages/index.tsx`)
+
+  const result1 = await graphql(
     `
       {
         allContentfulBlogPost {
@@ -17,7 +19,19 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   )
 
-  const posts = result.data.allContentfulBlogPost.edges
+  const result2 = await graphql(
+    `
+      {
+        allContentfulBlogPost {
+          group(field: categories) {
+            fieldValue
+          }
+        }
+      }
+    `
+  )
+  const posts = result1.data.allContentfulBlogPost.edges
+  const categories = result2.data.allContentfulBlogPost.group
 
   if (posts.length > 0) {
     posts.forEach(edge => {
@@ -26,6 +40,18 @@ exports.createPages = async ({ graphql, actions }) => {
         path: edge.node.slug,
         context: {
           slug: edge.node.slug,
+        },
+      })
+    })
+  }
+
+  if (categories.length > 0) {
+    categories.forEach(category => {
+      createPage({
+        path: `/category=${category.fieldValue}`,
+        component: indexPage,
+        context: {
+          categories: category.fieldValue,
         },
       })
     })
