@@ -23,7 +23,7 @@ const Index = ({ data }: PageProps<DataType>) => {
       <StyledPostListWrap>
         {posts.map(post => (
           <li key={post.node.slug}>
-            <Link to={post.node.slug} itemProp="url">
+            <Link to={`/${post.node.slug}`} itemProp="url">
               <span className="title">{post.node.title}</span>
               <span className="date">{post.node.publishedDate}</span>
             </Link>

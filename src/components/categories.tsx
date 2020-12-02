@@ -21,7 +21,7 @@ const Categories = () => {
       <ul>
         {categories.map(category => (
           <li key={category.fieldValue}>
-            <Link to={`category=${category.fieldValue}`}>
+            <Link to={`/category=${category.fieldValue}`}>
               {category.fieldValue}
             </Link>
           </li>
