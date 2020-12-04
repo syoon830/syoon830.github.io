@@ -15,21 +15,26 @@ const StyledContent = styled.div`
 `
 
 const StyledHeader = styled.header`
-  border-bottom: 1px solid #e3e3e3;
-  padding: 40px 0;
-  @media only screen and (max-width: 720px) {
+  h1 {
     padding: 20px 0;
+    a {
+      font-size: 24px;
+      letter-spacing: -0.02em;
+      font-family: acumin-pro, sans-serif;
+    }
   }
-
-  h1 a {
-    font-size: 24px;
-    letter-spacing: -0.02em;
-    font-family: acumin-pro, sans-serif;
+  @media only screen and (max-width: 720px) {
+    h1 {
+      padding: 20px 0;
+    }
   }
 `
 
 const StyledCategories = styled.div`
-  font-size: 12px;
+  font-size: 14px;
+  padding-bottom: 10px;
+  text-align: right;
+  border-bottom: 1px solid #e3e3e3;
 `
 const StyledPostListWrap = styled.ul`
   padding: 20px 0;

@@ -6,22 +6,20 @@ import { StyledPost } from "../style/Styles"
 import Utterances from "../components/utterances"
 
 type DataType = {
-  contentfulBlogPost: {
-    publishedDate: string
-    title: string
-    body: {
-      childMarkdownRemark: {
-        html: string
-      }
+  markdownRemark: {
+    frontmatter: {
+      title: string
+      date: string
     }
+    html: string
   }
 }
 
 const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
-  const post = data.contentfulBlogPost
-  const title = post.title
-  const date = post.publishedDate
-  const content = post.body.childMarkdownRemark.html
+  const post = data.markdownRemark
+  const title = post.frontmatter.title
+  const date = post.frontmatter.date
+  const content = post.html
   return (
     <Layout>
       <StyledPost>
@@ -44,14 +42,12 @@ const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-      title
-      publishedDate(formatString: "YYYY.MM.DD")
-      body {
-        childMarkdownRemark {
-          html
-        }
+  query($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        date(formatString: "YYYY.MM.DD")
       }
     }
   }

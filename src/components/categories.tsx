@@ -5,16 +5,15 @@ import { StyledCategories } from "../style/Styles"
 const Categories = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost {
-        group(field: categories) {
+      allMarkdownRemark {
+        group(field: frontmatter___categories) {
           fieldValue
-          totalCount
         }
       }
     }
   `)
 
-  const categories = data.allContentfulBlogPost.group
+  const categories = data.allMarkdownRemark.group
 
   return (
     <StyledCategories>

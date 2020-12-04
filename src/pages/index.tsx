@@ -5,27 +5,31 @@ import Layout from "../components/layout"
 import { StyledPostListWrap } from "../style/Styles"
 
 type DataType = {
-  allContentfulBlogPost: {
+  allMarkdownRemark: {
     edges: {
       node: {
-        title: string
-        slug: string
-        publishedDate: string
+        fields: {
+          slug: string
+        }
+        frontmatter: {
+          title: string
+          date: string
+        }
       }
     }[]
   }
 }
 
 const Index = ({ data }: PageProps<DataType>) => {
-  const posts = data.allContentfulBlogPost.edges
+  const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
       <StyledPostListWrap>
         {posts.map(post => (
-          <li key={post.node.slug}>
-            <Link to={`/${post.node.slug}`} itemProp="url">
-              <span className="title">{post.node.title}</span>
-              <span className="date">{post.node.publishedDate}</span>
+          <li key={post.node.fields.slug}>
+            <Link to={`${post.node.fields.slug}`} itemProp="url">
+              <span className="title">{post.node.frontmatter.title}</span>
+              <span className="date">{post.node.frontmatter.date}</span>
             </Link>
           </li>
         ))}
@@ -37,16 +41,20 @@ const Index = ({ data }: PageProps<DataType>) => {
 export default Index
 
 export const pageQuery = graphql`
-  query($categories: String) {
-    allContentfulBlogPost(
-      sort: { fields: publishedDate, order: DESC }
-      filter: { categories: { eq: $categories } }
+  query($category: String) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { categories: { eq: $category } } }
     ) {
       edges {
         node {
-          title
-          publishedDate(formatString: "YYYY.MM.DD")
-          slug
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "YYYY.MM.DD")
+            title
+          }
         }
       }
     }

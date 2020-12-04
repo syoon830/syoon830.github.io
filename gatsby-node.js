@@ -1,16 +1,19 @@
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
+  const postTemplate = path.resolve(`./src/templates/blog-post.tsx`)
   const indexPage = path.resolve(`./src/pages/index.tsx`)
 
+  // 데이터 불러와서!
   const result1 = await graphql(
     `
       {
-        allContentfulBlogPost {
-          edges {
-            node {
+        allMarkdownRemark {
+          nodes {
+            id
+            fields {
               slug
             }
           }
@@ -22,38 +25,51 @@ exports.createPages = async ({ graphql, actions }) => {
   const result2 = await graphql(
     `
       {
-        allContentfulBlogPost {
-          group(field: categories) {
+        allMarkdownRemark {
+          group(field: frontmatter___categories) {
             fieldValue
           }
         }
       }
     `
   )
-  const posts = result1.data.allContentfulBlogPost.edges
-  const categories = result2.data.allContentfulBlogPost.group
+  const posts = result1.data.allMarkdownRemark.nodes
+  const categories = result2.data.allMarkdownRemark.group
 
-  if (posts.length > 0) {
-    posts.forEach(edge => {
-      createPage({
-        component: blogPost,
-        path: edge.node.slug,
-        context: {
-          slug: edge.node.slug,
-        },
-      })
+  // slug(url)에 맞게 페이지 생성)
+  posts.forEach(post => {
+    createPage({
+      component: postTemplate,
+      path: post.fields.slug,
+      context: {
+        id: post.id,
+      },
     })
-  }
+  })
 
-  if (categories.length > 0) {
-    categories.forEach(category => {
-      createPage({
-        path: `/category=${category.fieldValue}`,
-        component: indexPage,
-        context: {
-          categories: category.fieldValue,
-        },
-      })
+  categories.forEach(category => {
+    createPage({
+      path: `/category=${category.fieldValue}`,
+      component: indexPage,
+      context: {
+        category: category.fieldValue,
+      },
+    })
+  })
+}
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    // /posts/arrow-function
+    const value = createFilePath({ node, getNode })
+
+    // md 파일 명 url (ex. arrow.md -> /arrow
+    // const slug = path.basename(node.fileAbsolutePath, ".md")
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
     })
   }
 }
