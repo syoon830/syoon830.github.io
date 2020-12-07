@@ -2,8 +2,16 @@ import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { StyledCategories } from "../style/Styles"
 
-const Categories = () => {
-  const data = useStaticQuery(graphql`
+type DataProps = {
+  allMarkdownRemark: {
+    group: {
+      fieldValue: string
+    }[]
+  }
+}
+
+const Categories: React.FC<DataProps> = () => {
+  const data: DataProps = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
         group(field: frontmatter___categories) {
