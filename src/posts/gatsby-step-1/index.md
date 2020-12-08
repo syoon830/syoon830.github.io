@@ -26,3 +26,18 @@ npm run develop
 ```
 
 ![프로젝트 세팅 완료](./1.png)
+
+## typescript 설정
+
+### 확장자 변경
+/src/pages/index.js => /src/pages/index.tsx
+
+### /tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "strict": true
+  }
+}
+```
