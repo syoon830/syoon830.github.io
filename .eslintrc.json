@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "airbnb-typescript", // airbnb typescript 권장 규칙
+    "airbnb/hooks", // airbnb hook 권장 규칙
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}

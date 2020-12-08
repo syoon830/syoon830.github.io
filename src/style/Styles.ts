@@ -1,18 +1,18 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const StyledWrap = styled.div`
   width: 980px;
   max-width: 100%;
   background-color: #fff;
   margin: 0 auto;
-`
+`;
 
 const StyledContent = styled.div`
   padding: 0 40px;
   @media only screen and (max-width: 720px) {
     padding: 0 20px;
   }
-`
+`;
 
 const StyledHeader = styled.header`
   h1 {
@@ -28,14 +28,14 @@ const StyledHeader = styled.header`
       padding: 20px 0;
     }
   }
-`
+`;
 
 const StyledCategories = styled.div`
   font-size: 14px;
   padding-bottom: 10px;
   text-align: right;
   border-bottom: 1px solid #e3e3e3;
-`
+`;
 const StyledPostListWrap = styled.ul`
   padding: 20px 0;
   li {
@@ -53,7 +53,7 @@ const StyledPostListWrap = styled.ul`
     font-size: 14px;
     color: #b3aaaa;
   }
-`
+`;
 
 const StyledPost = styled.div`
   .post-header {
@@ -68,7 +68,7 @@ const StyledPost = styled.div`
       color: #b3aaaa;
     }
   }
-`
+`;
 
 export {
   StyledWrap,
@@ -77,4 +77,4 @@ export {
   StyledCategories,
   StyledPostListWrap,
   StyledPost,
-}
+};

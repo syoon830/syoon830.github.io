@@ -1,49 +1,49 @@
 module.exports = {
   siteMetadata: {
-    title: "seungyoonkim",
+    title: 'seungyoonkim',
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `post`,
+        name: 'post',
         path: `${__dirname}/src/posts`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 630,
             },
           },
-          `gatsby-remark-prismjs`,
+          'gatsby-remark-prismjs',
         ],
       },
     },
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: "GTM-MQ7V225",
+        id: 'GTM-MQ7V225',
         includeInDevelopment: false,
       },
     },
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ["Noto Sans KR"],
+          families: ['Noto Sans KR'],
         },
         typekit: {
-          id: "pfn4qds",
+          id: 'pfn4qds',
         },
       },
     },
   ],
-}
+};

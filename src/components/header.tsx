@@ -1,11 +1,19 @@
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import { Helmet } from "react-helmet"
-import { StyledHeader } from "../style/Styles"
-import Categories from "./categories"
+import * as React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { StyledHeader } from '../style/Styles';
+// import Categories from './categories';
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
+type DataProps = {
+  site: {
+    siteMetadata: {
+      title: string
+    }
+  }
+};
+
+const Header: React.FC = () => {
+  const data: DataProps = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -13,7 +21,7 @@ const Header = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <StyledHeader>
@@ -21,9 +29,9 @@ const Header = () => {
       <h1>
         <Link to="/">{data.site.siteMetadata.title}</Link>
       </h1>
-      {/*<Categories />*/}
+      {/* <Categories /> */}
     </StyledHeader>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

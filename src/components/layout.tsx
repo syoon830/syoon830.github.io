@@ -1,23 +1,21 @@
-import React, { ReactNode } from "react"
+import * as React from 'react';
 
-import Header from "./header"
-import GlobalStyles from "../style/GlobalStyles"
-import { StyledWrap, StyledContent } from "../style/Styles"
+import Header from './header';
+import GlobalStyles from '../style/GlobalStyles';
+import { StyledWrap, StyledContent } from '../style/Styles';
 
 type Props = {
-  children: ReactNode
-}
+  children: JSX.Element;
+};
 
-const Layout = ({ children }: Props) => {
-  return (
-    <StyledWrap>
-      <GlobalStyles />
-      <StyledContent>
-        <Header />
-        <div>{children}</div>
-      </StyledContent>
-    </StyledWrap>
-  )
-}
+const Layout: React.FC<Props> = ({ children }: Props) => (
+  <StyledWrap>
+    <GlobalStyles />
+    <StyledContent>
+      <Header />
+      <div>{children}</div>
+    </StyledContent>
+  </StyledWrap>
+);
 
-export default Layout
+export default Layout;

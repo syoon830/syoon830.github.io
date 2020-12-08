@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { PageProps } from "gatsby"
-import Layout from "../components/layout"
-import { StyledPost } from "../style/Styles"
-import Utterances from "../components/utterances"
+import * as React from 'react';
+import { graphql, PageProps } from 'gatsby';
+
+import Layout from '../components/layout';
+import { StyledPost } from '../style/Styles';
+import Utterances from '../components/utterances';
 
 type DataType = {
   markdownRemark: {
@@ -13,13 +13,13 @@ type DataType = {
     }
     html: string
   }
-}
+};
 
 const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
-  const post = data.markdownRemark
-  const title = post.frontmatter.title
-  const date = post.frontmatter.date
-  const content = post.html
+  const post = data.markdownRemark;
+  const { title } = post.frontmatter;
+  const { date } = post.frontmatter;
+  const content = post.html;
   return (
     <Layout>
       <StyledPost>
@@ -33,13 +33,13 @@ const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
             itemProp="articleBody"
           />
         </div>
-        <Utterances repo="syoon830/syoon830.github.io" />
+        <Utterances repo="syoon830/blog" />
       </StyledPost>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query($id: String!) {
@@ -51,4 +51,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

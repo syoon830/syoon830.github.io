@@ -1,6 +1,6 @@
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import { StyledCategories } from "../style/Styles"
+import * as React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import { StyledCategories } from '../style/Styles';
 
 type DataProps = {
   allMarkdownRemark: {
@@ -8,9 +8,9 @@ type DataProps = {
       fieldValue: string
     }[]
   }
-}
+};
 
-const Categories: React.FC<DataProps> = () => {
+const Categories: React.FC = () => {
   const data: DataProps = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -19,14 +19,14 @@ const Categories: React.FC<DataProps> = () => {
         }
       }
     }
-  `)
+  `);
 
-  const categories = data.allMarkdownRemark.group
+  const categories = data.allMarkdownRemark.group;
 
   return (
     <StyledCategories>
       <ul>
-        {categories.map(category => (
+        {categories.map((category) => (
           <li key={category.fieldValue}>
             <Link to={`/category=${category.fieldValue}`}>
               {category.fieldValue}
@@ -35,7 +35,7 @@ const Categories: React.FC<DataProps> = () => {
         ))}
       </ul>
     </StyledCategories>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;
