@@ -16,18 +16,18 @@ npm install gatsby-source-filesystem
 ```javascript
 module.exports = {
   siteMetadata: {
-    title: `승윤 블로그`,
+    title: '승윤 블로그',
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
++   {
++     resolve: 'gatsby-source-filesystem',
++     options: {
++       name: 'src',
++       path: `${__dirname}/src/`,
++     },
++   },
   ],
-}
+};
 ```
 
 ### 파일 목록 query
@@ -74,19 +74,19 @@ npm install gatsby-transformer-remark
 ```javascript
 module.exports = {
   siteMetadata: {
-    title: `승윤 블로그`,
+    title: '승윤 블로그',
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
++   'gatsby-transformer-remark',
   ],
-}
+};
 ```
 
 ### markdown 파일 목록 query
@@ -111,58 +111,55 @@ query {
 ### /src/pages/index.tsx
 
 ```tsx
-import * as React from "react"
-import Layout from "../components/layout"
-import { graphql, PageProps } from "gatsby"
+import * as React from 'react';
+import { graphql, PageProps } from 'gatsby';
+import Layout from '../components/layout';
 
-interface IndexPageProps extends PageProps {
-  data: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          frontmatter: {
-            title: string
-            date: string
-          }
-        }
-      }[]
-    }
-  }
-}
+type DataType = {
+  allMarkdownRemark: {
+    edges: {
+      node: {
+        frontmatter: {
+          title: string;
+          date: string;
+        };
+      };
+    }[];
+  };
+};
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-          }
+    query IndexQuery {
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        date
+                    }
+                }
+            }
         }
-      }
     }
-  }
-`
+`;
 
-export default class IndexPage extends React.Component<IndexPageProps> {
-  public render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    return (
-      <Layout>
-        <ul>
-          {posts.map(post => {
-            return (
-              <li>
-                {post.node.frontmatter.title} {post.node.frontmatter.date}
-              </li>
-            )
-          })}
-        </ul>
-      </Layout>
-    )
-  }
-}
+const IndexPage = ({ data }: PageProps<DataType>): JSX.Element => {
+  const posts = data.allMarkdownRemark.edges;
+  return (
+    <Layout>
+      <ul>
+        {posts.map((post) => (
+          <li>
+            {post.node.frontmatter.title}
+            {post.node.frontmatter.date}
+          </li>
+        ))}
+      </ul>
+    </Layout>
+  );
+};
+
+export default IndexPage;
 ```
 
 ![](./1.png)

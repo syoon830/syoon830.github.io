@@ -33,7 +33,7 @@ const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
             itemProp="articleBody"
           />
         </div>
-        <Utterances repo="syoon830/blog" />
+        <Utterances repo="syoon830/syoon830.github.io" />
       </StyledPost>
     </Layout>
   );

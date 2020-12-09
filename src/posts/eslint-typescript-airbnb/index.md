@@ -15,30 +15,29 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
-  ]
+  ],
+  "rules": {
+    "linebreak-style": 0 // CRLF, LF 때문에 넣어 둠...
+  }
 }
 ```
 
 ## + Airbnb
 ```bash
-npm install eslint-config-airbnb-typescript --save-dev
+npm install -D eslint-config-airbnb-typescript
 ```
-  
-#### - 추가로 아래 라이브러리 버전 설치
 
-```bash
-npm install eslint-plugin-import@^2.22.0 \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
-            --save-dev
-```
-#### /.eslintrc.json
+### /.eslintrc.json
 ```json
 {
   "extends": [
-    "airbnb-typescript",
+    "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
+  "rules": {
+    "linebreak-style": 0
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
   }
@@ -46,14 +45,6 @@ npm install eslint-plugin-import@^2.22.0 \
 ```
 
 ### - React에서 사용시
-```bash
-npm install eslint-plugin-import@^2.22.0 \
-            @typescript-eslint/eslint-plugin@^4.4.1 \
-            eslint-plugin-jsx-a11y@^6.3.1 \
-            eslint-plugin-react@^7.20.3 \
-            eslint-plugin-react-hooks@^4.0.8 \
-            --save-dev
-```
 ### /.eslintrc.json
 ```json
 {
@@ -62,6 +53,12 @@ npm install eslint-plugin-import@^2.22.0 \
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
-  ]
+  ],
+  "rules": {
+    "linebreak-style": 0
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }
 ```

@@ -10,10 +10,10 @@ date: 2020-11-11 21:53
 ```javascript
 module.exports = {
   siteMetadata: {
-    title: `승윤 블로그`,
+    title: '승윤 블로그',
   },
   plugins: [],
-}
+};
 ```
 
 ## metadata 정보로 타이틀 적용
@@ -35,19 +35,27 @@ query {
 ### /components/header.tsx
 
 ```tsx
-import * as React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import * as React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
-const Header: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+type DataProps = {
+  site: {
+    siteMetadata: {
+      title: string
     }
-  `)
+  }
+};
+
+const Header = (): JSX.Element => {
+  const data: DataProps = useStaticQuery(graphql`
+      query {
+          site {
+              siteMetadata {
+                  title
+              }
+          }
+      }
+  `);
 
   return (
     <header>
@@ -56,9 +64,10 @@ const Header: React.FC = () => {
       </h1>
       <Link to="/about">about</Link>
     </header>
-  )
-}
-export default Header
+  );
+};
+
+export default Header;
 ```
 
 ![](./1.png)

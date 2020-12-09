@@ -26,66 +26,63 @@ module.exports.onCreateNode = ({ node, actions }) => {
 ## /src/pages/index.tsx
 
 ```tsx
-import * as React from "react"
-import Layout from "../components/layout"
-import { graphql, Link, PageProps } from "gatsby"
+import * as React from 'react';
+import { graphql, Link, PageProps } from 'gatsby';
+import Layout from '../components/layout';
 
-interface IndexPageProps extends PageProps {
-  data: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          frontmatter: {
-            title: string
-            date: string
-          }
-          fields: {
-            slug: string
-          }
+type DataType = {
+  allMarkdownRemark: {
+    edges: {
+      node: {
+        frontmatter: {
+          title: string;
+          date: string;
+        };
+        fields: {
+          slug: string
         }
-      }[]
-    }
-  }
-}
+      };
+    }[];
+  };
+};
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            slug
-          }
+    query IndexQuery {
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        date
+                    }
+                    fields {
+                        slug
+                    }
+                }
+            }
         }
-      }
     }
-  }
-`
+`;
 
-export default class IndexPage extends React.Component<IndexPageProps> {
-  public render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    return (
-      <Layout>
-        <ul>
-          {posts.map(post => {
-            return (
-              <li>
-                <Link to={post.node.fields.slug}>
-                  {post.node.frontmatter.title} {post.node.frontmatter.date}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-      </Layout>
-    )
-  }
-}
+const IndexPage = ({ data }: PageProps<DataType>): JSX.Element => {
+  const posts = data.allMarkdownRemark.edges;
+  return (
+    <Layout>
+      <ul>
+        {posts.map((post) => (
+          <li>
+            <Link to={post.node.fields.slug}>
+              {post.node.frontmatter.title}
+              {post.node.frontmatter.date}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </Layout>
+  );
+};
+
+export default IndexPage;
 ```
 
 ## /gatsby-node.js
@@ -140,23 +137,23 @@ module.exports.createPages = async ({ graphql, actions }) => {
 ## /src/template/post.tsx
 
 ```tsx
-import * as React from "react"
-import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        date
-      }
-      html
+    query($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            frontmatter {
+                title
+                date
+            }
+            html
+        }
     }
-  }
-`
+`;
 
-type DataProps = {
+type DataType = {
   data: {
     markdownRemark: {
       frontmatter: {
@@ -166,20 +163,20 @@ type DataProps = {
       html: string
     }
   }
-}
+};
 
-const Post: React.FC<DataProps> = ({ data }) => {
-  const post = data.markdownRemark
+const Post = ({ data }: DataType): JSX.Element => {
+  const post = data.markdownRemark;
   return (
     <Layout>
       <h1>{post.frontmatter.title}</h1>
       <p>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;
 ```
 
 ![](./1.gif)

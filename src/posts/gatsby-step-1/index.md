@@ -4,8 +4,11 @@ date: 2020-11-10 20:38
 ---
 
 많은 cms 플랫폼이 있다. hexo gatsby vuepress jekyll 등  
-아시는 분이 jekyll로 블로그를 운영한다고 하여 처음에는 jekyll로 해봤는데 구축이야 금방하는데 커스텀이 좀 까다로웠다. (ruby 언어)  
-이후에 hexo로도 해보고 vuepress로도 해보고.. 돌고 돌아 gatsby로 만들어 보게 되었다.    
+아시는 분이 jekyll로 블로그를 운영한다고 하여 처음에는 jekyll로 해봤는데 구축이야 금방 하는데 커스텀이 좀 까다로웠다. (ruby 언어)  
+이후에 hexo로도 해보고 vuepress로도 해보고.. 돌고 돌아 gatsby로 정착(?)하게 되었다.
+
+나는 가장 심플한 스타터를 가지고 제작해 보았다. (좋은 스타터들이 많으니 웬만하면 그 스타터를 이용하는 게 정신건강에 좋다.)  
+https://www.gatsbyjs.com/starters/?v=2
 
 ## gatsby-cli 설치
 
@@ -50,3 +53,6 @@ npm install -D typescript
   }
 }
 ```
+
+#### eslint 설정도 미리 해두자  
+[Typescript ESlint Prettier 설정 (+ Airbnb)](/eslint-typescript-airbnb/)
