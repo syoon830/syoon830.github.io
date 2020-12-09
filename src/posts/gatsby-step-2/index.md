@@ -8,35 +8,39 @@ date: 2020-11-10 21:20
 ### src/components/header.tsx
 
 ```tsx
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-const Header: React.FC = () => (
+const Header = (): JSX.Element => (
   <header>
     <h1>
       <Link to="/">My Blog</Link>
     </h1>
     <Link to="/about">about</Link>
   </header>
-)
+);
 
-export default Header
+export default Header;
 ```
 
 ### src/components/layout.tsx
 
 ```tsx
-import * as React from "react"
-import Header from "./header"
+import * as React from 'react';
+import Header from './header';
 
-const Layout: React.FC = ({ children }) => (
+interface Props {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: Props): JSX.Element => (
   <div>
     <Header />
     {children}
   </div>
-)
+);
 
-export default Layout
+export default Layout;
 ```
 
 ## Layout 컴포넌트 적용
@@ -44,27 +48,23 @@ export default Layout
 ### src/pages/index.tsx
 
 ```tsx
-import * as React from "react"
-import Layout from "../components/layout"
+import * as React from 'react';
+import Layout from '../components/layout';
 
-export default class IndexPage extends React.Component {
-  public render() {
-    return <Layout>Index</Layout>
-  }
-}
+const IndexPage = (): JSX.Element => <Layout>Index</Layout>;
+
+export default IndexPage;
 ```
 
 ### src/pages/about.tsx
 
 ```tsx
-import * as React from "react"
-import Layout from "../components/layout"
+import * as React from 'react';
+import Layout from '../components/layout';
 
-export default class AboutPage extends React.Component {
-  public render() {
-    return <Layout>About</Layout>
-  }
-}
+const AboutPage = (): JSX.Element => <Layout>About</Layout>;
+
+export default AboutPage;
 ```
 
 ![](./1.gif)
