@@ -37,14 +37,17 @@ npm run develop
 ## typescript 설정
 
 ### typescript 설치
+
 ```bash
 npm install -D typescript
 ```
 
 ### 확장자 변경
+
 /src/pages/index.js => /src/pages/index.tsx
 
 ### /tsconfig.json
+
 ```json
 {
   "compilerOptions": {
@@ -54,5 +57,6 @@ npm install -D typescript
 }
 ```
 
-#### eslint 설정도 미리 해두자  
+#### eslint 설정도 미리 해두자
+
 [Typescript ESlint Prettier 설정 (+ Airbnb)](/eslint-typescript-airbnb/)

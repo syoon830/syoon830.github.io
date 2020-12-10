@@ -30,7 +30,7 @@ import * as React from 'react';
 import Header from './header';
 
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const Layout = ({ children }: Props): JSX.Element => (

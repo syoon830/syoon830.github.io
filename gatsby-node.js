@@ -1,11 +1,10 @@
-/* eslint-disable */
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const postTemplate = path.resolve(`./src/templates/blog-post.tsx`)
-  const indexPage = path.resolve(`./src/pages/index.tsx`)
+  const { createPage } = actions;
+  const postTemplate = path.resolve(`./src/templates/blog-post.tsx`);
+  const indexPage = path.resolve(`./src/pages/index.tsx`);
 
   // 데이터 불러와서!
   const result1 = await graphql(
@@ -21,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `
-  )
+  );
 
   const result2 = await graphql(
     `
@@ -33,37 +32,37 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `
-  )
-  const posts = result1.data.allMarkdownRemark.nodes
-  const categories = result2.data.allMarkdownRemark.group
+  );
+  const posts = result1.data.allMarkdownRemark.nodes;
+  const categories = result2.data.allMarkdownRemark.group;
 
   // slug(url)에 맞게 페이지 생성)
-  posts.forEach(post => {
+  posts.forEach((post) => {
     createPage({
       component: postTemplate,
       path: post.fields.slug,
       context: {
         id: post.id,
       },
-    })
-  })
+    });
+  });
 
-  categories.forEach(category => {
+  categories.forEach((category) => {
     createPage({
       path: `/category=${category.fieldValue}`,
       component: indexPage,
       context: {
         category: category.fieldValue,
       },
-    })
-  })
-}
+    });
+  });
+};
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
     // /posts/arrow-function
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
 
     // md 파일 명 url (ex. arrow.md -> /arrow
     // const slug = path.basename(node.fileAbsolutePath, ".md")
@@ -71,6 +70,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
-    })
+    });
   }
-}
+};

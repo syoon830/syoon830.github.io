@@ -1,7 +1,7 @@
 ---
 title: 이터레이션
 date: 2020-11-30 22:58
-categories: ["함수형 프로그래밍"]
+categories: ['함수형 프로그래밍']
 ---
 
 이터레이션 프로토콜(iteration protocol)은 데이터 컬렉션을 순회하기 위한 규칙과 약속이다.
@@ -27,20 +27,20 @@ Array 외에도 Map, Set, String, TypedArray등이 이터러블 프로토콜을 
 Object, Number, Boolean 등의 일반 객체는 Symbol.iterator 소유하고 있지 않다. 따라서 이터러블 프로토콜을 준수한 이터러블이 아니다.
 
 ```javascript
-const arr = [1, 2, 3]
-const str = "Hello"
-const map = new Map()
-const set = new Set()
+const arr = [1, 2, 3];
+const str = 'Hello';
+const map = new Map();
+const set = new Set();
 
-const num = 1
-const bool = false
+const num = 1;
+const bool = false;
 
-console.dir(arr.__proto__.hasOwnProperty(Symbol.iterator)) // true
-console.dir(str.__proto__.hasOwnProperty(Symbol.iterator)) // true
-console.dir(map.__proto__.hasOwnProperty(Symbol.iterator)) // true
-console.dir(set.__proto__.hasOwnProperty(Symbol.iterator)) // true
-console.dir(num.__proto__.hasOwnProperty(Symbol.iterator)) // false
-console.dir(bool.__proto__.hasOwnProperty(Symbol.iterator)) // false
+console.dir(arr.__proto__.hasOwnProperty(Symbol.iterator)); // true
+console.dir(str.__proto__.hasOwnProperty(Symbol.iterator)); // true
+console.dir(map.__proto__.hasOwnProperty(Symbol.iterator)); // true
+console.dir(set.__proto__.hasOwnProperty(Symbol.iterator)); // true
+console.dir(num.__proto__.hasOwnProperty(Symbol.iterator)); // false
+console.dir(bool.__proto__.hasOwnProperty(Symbol.iterator)); // false
 ```
 
 ### 이터레이터
@@ -48,16 +48,16 @@ console.dir(bool.__proto__.hasOwnProperty(Symbol.iterator)) // false
 **Symbol.iterator 메소드를 통해 반환 받은 객체를 이터레이터한다. 이 이터레이터는 이터레이터 프로토콜을 준수한다.**
 
 ```javascript
-const arr = [1, 2, 3]
+const arr = [1, 2, 3];
 // 이터러블 프로토콜을 준수한 객체다.
-console.log(Symbol.iterator in arr) // true
+console.log(Symbol.iterator in arr); // true
 
 // Symbol.iterator 메소드는 이터레이터를 반환한다.
-const iterator = arr[Symbol.iterator]()
+const iterator = arr[Symbol.iterator]();
 // 이터레이터 프로토콜을 준수한 객체다.
-console.log("next" in iterator) // true
-console.log("value" in iterator.next()) // true
-console.log("done" in iterator.next()) // true
+console.log('next' in iterator); // true
+console.log('value' in iterator.next()); // true
+console.log('done' in iterator.next()); // true
 ```
 
 ### for of 문

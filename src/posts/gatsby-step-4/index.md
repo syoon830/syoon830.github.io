@@ -54,8 +54,8 @@ query {
 
 ```markdown
 ---
-title: "Hello"
-date: "2020-11-11"
+title: 'Hello'
+date: '2020-11-11'
 ---
 
 안녕하세요!
@@ -84,7 +84,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-+   'gatsby-transformer-remark',
+    +'gatsby-transformer-remark',
   ],
 };
 ```
@@ -129,18 +129,18 @@ type DataType = {
 };
 
 export const pageQuery = graphql`
-    query IndexQuery {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        title
-                        date
-                    }
-                }
-            }
+  query IndexQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+          }
         }
+      }
     }
+  }
 `;
 
 const IndexPage = ({ data }: PageProps<DataType>): JSX.Element => {

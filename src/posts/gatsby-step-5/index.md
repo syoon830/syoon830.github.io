@@ -6,21 +6,21 @@ date: 2020-11-12 21:18
 ## /gatsby-node.js
 
 ```javascript
-import path from "path"
+import path from 'path';
 
 module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = path.basename(node.fileAbsolutePath, `.md`)
+    const slug = path.basename(node.fileAbsolutePath, `.md`);
 
     createNodeField({
       node,
       name: `slug`,
       value: slug,
-    })
+    });
   }
-}
+};
 ```
 
 ## /src/pages/index.tsx
@@ -39,29 +39,29 @@ type DataType = {
           date: string;
         };
         fields: {
-          slug: string
-        }
+          slug: string;
+        };
       };
     }[];
   };
 };
 
 export const pageQuery = graphql`
-    query IndexQuery {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        title
-                        date
-                    }
-                    fields {
-                        slug
-                    }
-                }
-            }
+  query IndexQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+          }
+          fields {
+            slug
+          }
         }
+      }
     }
+  }
 `;
 
 const IndexPage = ({ data }: PageProps<DataType>): JSX.Element => {
@@ -88,25 +88,25 @@ export default IndexPage;
 ## /gatsby-node.js
 
 ```javascript
-const path = require(`path`)
+const path = require(`path`);
 
 module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = path.basename(node.fileAbsolutePath, `.md`)
+    const slug = path.basename(node.fileAbsolutePath, `.md`);
 
     createNodeField({
       node,
       name: `slug`,
       value: slug,
-    })
+    });
   }
-}
+};
 
 module.exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const postTemplate = path.resolve(`./src/templates/post.tsx`)
+  const { createPage } = actions;
+  const postTemplate = path.resolve(`./src/templates/post.tsx`);
   const res = await graphql(`
     query {
       allMarkdownRemark {
@@ -119,19 +119,19 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
-  const posts = res.data.allMarkdownRemark.edges
-  posts.forEach(post => {
+  const posts = res.data.allMarkdownRemark.edges;
+  posts.forEach((post) => {
     createPage({
       component: postTemplate,
       path: `${post.node.fields.slug}`,
       context: {
         slug: post.node.fields.slug,
       },
-    })
-  })
-}
+    });
+  });
+};
 ```
 
 ## /src/template/post.tsx
@@ -142,27 +142,27 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 export const query = graphql`
-    query($slug: String!) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-            frontmatter {
-                title
-                date
-            }
-            html
-        }
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        date
+      }
+      html
     }
+  }
 `;
 
 type DataType = {
   data: {
     markdownRemark: {
       frontmatter: {
-        title: string
-        date: string
-      }
-      html: string
-    }
-  }
+        title: string;
+        date: string;
+      };
+      html: string;
+    };
+  };
 };
 
 const Post = ({ data }: DataType): JSX.Element => {

@@ -41,20 +41,20 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 type DataProps = {
   site: {
     siteMetadata: {
-      title: string
-    }
-  }
+      title: string;
+    };
+  };
 };
 
 const Header = (): JSX.Element => {
   const data: DataProps = useStaticQuery(graphql`
-      query {
-          site {
-              siteMetadata {
-                  title
-              }
-          }
+    query {
+      site {
+        siteMetadata {
+          title
+        }
       }
+    }
   `);
 
   return (

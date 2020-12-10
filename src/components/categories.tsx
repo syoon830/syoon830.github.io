@@ -5,9 +5,9 @@ import { StyledCategories } from '../style/Styles';
 type DataProps = {
   allMarkdownRemark: {
     group: {
-      fieldValue: string
-    }[]
-  }
+      fieldValue: string;
+    }[];
+  };
 };
 
 const Categories: React.FC = () => {

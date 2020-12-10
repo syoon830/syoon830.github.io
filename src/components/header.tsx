@@ -7,9 +7,9 @@ import { StyledHeader } from '../style/Styles';
 type DataProps = {
   site: {
     siteMetadata: {
-      title: string
-    }
-  }
+      title: string;
+    };
+  };
 };
 
 const Header: React.FC = () => {

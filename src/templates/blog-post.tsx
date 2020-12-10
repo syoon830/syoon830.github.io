@@ -8,14 +8,14 @@ import Utterances from '../components/utterances';
 type DataType = {
   markdownRemark: {
     frontmatter: {
-      title: string
-      date: string
-    }
-    html: string
-  }
+      title: string;
+      date: string;
+    };
+    html: string;
+  };
 };
 
-const BlogPostTemplate = ({ data }: PageProps<DataType>) => {
+const BlogPostTemplate = ({ data }: PageProps<DataType>): React.ReactNode => {
   const post = data.markdownRemark;
   const { title } = post.frontmatter;
   const { date } = post.frontmatter;

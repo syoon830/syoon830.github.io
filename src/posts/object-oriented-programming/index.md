@@ -1,7 +1,7 @@
 ---
-title: "객체 지향 프로그래밍 (Object Oriented Programming)"
-date: "2020-11-15 21:45"
-categories: ["객체지향 프로그래밍"]
+title: '객체 지향 프로그래밍 (Object Oriented Programming)'
+date: '2020-11-15 21:45'
+categories: ['객체지향 프로그래밍']
 ---
 
 ## 객체지향이란?

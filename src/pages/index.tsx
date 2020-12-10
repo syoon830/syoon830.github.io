@@ -19,7 +19,7 @@ type DataType = {
   };
 };
 
-const Index = ({ data }: PageProps<DataType>): JSX.Element => {
+const Index = ({ data }: PageProps<DataType>): React.ReactNode => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>

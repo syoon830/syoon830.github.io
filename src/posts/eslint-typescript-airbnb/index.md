@@ -4,12 +4,14 @@ date: 2020-11-22 23:23
 ---
 
 ## 기본 설정 (공식문서에서 추천하는 룰 사용)
+
 ```bash
 npm i -D eslint @typescript-eslint/eslint-plugin
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 ### /.eslintrc.json
+
 ```json
 {
   "extends": [
@@ -23,11 +25,13 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 ## + Airbnb
+
 ```bash
 npm install -D eslint-config-airbnb-typescript
 ```
 
 ### /.eslintrc.json
+
 ```json
 {
   "extends": [
@@ -45,7 +49,9 @@ npm install -D eslint-config-airbnb-typescript
 ```
 
 ### - React에서 사용시
+
 ### /.eslintrc.json
+
 ```json
 {
   "extends": [
