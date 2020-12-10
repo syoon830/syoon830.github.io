@@ -4,6 +4,7 @@ import { graphql, PageProps } from 'gatsby';
 import Layout from '../components/layout';
 import { StyledPost } from '../style/Styles';
 import Utterances from '../components/utterances';
+import SEO from '../components/seo';
 
 type DataType = {
   markdownRemark: {
@@ -23,6 +24,7 @@ const BlogPostTemplate = ({ data }: PageProps<DataType>): React.ReactNode => {
   return (
     <Layout>
       <StyledPost>
+        <SEO title={title} />
         <div className="post-header">
           <div className="title">{title}</div>
           <div className="date">{date}</div>

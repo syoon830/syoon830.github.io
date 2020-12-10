@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Link, graphql, PageProps } from 'gatsby';
 import Layout from '../components/layout';
-import { StyledPostListWrap } from '../style/Styles';
+import { StyledPost, StyledPostListWrap } from '../style/Styles';
+import SEO from '../components/seo';
 
 type DataType = {
   allMarkdownRemark: {
@@ -24,6 +25,7 @@ const Index = ({ data }: PageProps<DataType>): React.ReactNode => {
   return (
     <Layout>
       <StyledPostListWrap>
+        <SEO title="Home" />
         {posts.map((post) => (
           <li key={post.node.fields.slug}>
             <Link to={`${post.node.fields.slug}`} itemProp="url">
