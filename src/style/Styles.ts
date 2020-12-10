@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledWrap = styled.div`
-  width: 980px;
+  width: 840px;
   max-width: 100%;
   background-color: #fff;
   margin: 0 auto;

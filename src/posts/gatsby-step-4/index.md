@@ -19,19 +19,18 @@ module.exports = {
     title: '승윤 블로그',
   },
   plugins: [
-+   {
-+     resolve: 'gatsby-source-filesystem',
-+     options: {
-+       name: 'src',
-+       path: `${__dirname}/src/`,
-+     },
-+   },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`,
+      },
+    },
   ],
 };
 ```
 
 ### 파일 목록 query
-
 ```graphql
 query {
   allFile {
@@ -84,7 +83,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    +'gatsby-transformer-remark',
+    'gatsby-transformer-remark',
   ],
 };
 ```
@@ -112,7 +111,7 @@ query {
 
 ```tsx
 import * as React from 'react';
-import { graphql, PageProps } from 'gatsby';
+import { graphql, Link, PageProps } from 'gatsby';
 import Layout from '../components/layout';
 
 type DataType = {

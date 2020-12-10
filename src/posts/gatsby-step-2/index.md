@@ -11,14 +11,16 @@ date: 2020-11-10 21:20
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-const Header = (): JSX.Element => (
-  <header>
-    <h1>
-      <Link to="/">My Blog</Link>
-    </h1>
-    <Link to="/about">about</Link>
-  </header>
-);
+const Header = (): JSX.Element => {
+  return (
+    <header>
+      <h1>
+        <Link to="/">My Blog</Link>
+      </h1>
+      <Link to="/about">about</Link>
+    </header>
+  );
+};
 
 export default Header;
 ```

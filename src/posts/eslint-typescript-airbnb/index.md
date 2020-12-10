@@ -31,6 +31,55 @@ npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 }
 ```
 
+### /.eslintignore
+
+```
+.cache
+node_modules
+public
+```
+
+### /.prettierrc
+
+```
+{
+  "singleQuote": true,
+  "tabWidth": 2
+}
+```
+
+### /.prettierignore
+
+```
+.cache
+package.json
+package-lock.json
+public
+```
+
+### /package.json
+
+```json
+
+{
+  ...
+  "scripts": {
+    ...
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    ...
+  },
+  ...
+},
+
+```
+
+## React에서 사용 시
+
+```bash
+$ npm i -D eslint-plugin-react-hooks
+```
+
 ## + Airbnb
 
 ```bash

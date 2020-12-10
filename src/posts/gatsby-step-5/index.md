@@ -6,17 +6,17 @@ date: 2020-11-12 21:18
 ## /gatsby-node.js
 
 ```javascript
-import path from 'path';
+const path = require('path');
 
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = path.basename(node.fileAbsolutePath, `.md`);
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = path.basename(node.fileAbsolutePath, '.md');
 
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: slug,
     });
   }
@@ -70,7 +70,7 @@ const IndexPage = ({ data }: PageProps<DataType>): JSX.Element => {
     <Layout>
       <ul>
         {posts.map((post) => (
-          <li>
+          <li key={post.node.fields.slug}>
             <Link to={post.node.fields.slug}>
               {post.node.frontmatter.title}
               {post.node.frontmatter.date}
@@ -88,17 +88,17 @@ export default IndexPage;
 ## /gatsby-node.js
 
 ```javascript
-const path = require(`path`);
+const path = require('path');
 
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = path.basename(node.fileAbsolutePath, `.md`);
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = path.basename(node.fileAbsolutePath, '.md');
 
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: slug,
     });
   }
@@ -106,7 +106,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const postTemplate = path.resolve(`./src/templates/post.tsx`);
+  const postTemplate = path.resolve('./src/templates/post.tsx');
   const res = await graphql(`
     query {
       allMarkdownRemark {
