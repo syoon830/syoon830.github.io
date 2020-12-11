@@ -1,67 +1,76 @@
 ---
-title: 이터레이션
+title: 이터레이션 프로토콜(Iteration protocols)
 date: 2020-11-30 22:58
-categories: ['함수형 프로그래밍']
+categories: ['ES6']
 ---
 
-이터레이션 프로토콜(iteration protocol)은 데이터 컬렉션을 순회하기 위한 규칙과 약속이다.
+이터레이션 프로토콜(iteration protocol)은 데이터 컬렉션을 순회하기 위한 규칙과 약속이다.  
+ES6에 도입된 for..of문과 Spread문법의 피연산자가 되기 위해서는 이 프로토콜을 준수하여야 한다.
 
-이 이터레이션 프로토콜(iteration protocol)에는 이터러블 프로토콜(iterable protocol)과 이터레이터 프로토콜(iterator protocol)이 있다.
+이터레이션 프로토콜에는 이터러블 프로토콜(iterable protocol), 이터레이터 프로토콜(iterator protocol)이 있다.
 
-(용어가 비슷비슷해서 헷갈린다...)
+## 이터러블
+\- 이터러블 프로토콜을 준수한 객체를 이터러블이라 한다. 
 
-**이터러블 프로토콜(iterable protocol): \[Symbol.iterator\]()를 가지고 있음**
+### 이터러블 프로토콜  
+\- `Symbol.iterator` 메소드를 가지고 있으며, 이 메소드는 `이터레이터`를 반환한다.
 
-**이터레이터 프로토콜(iterator protocol): { next() { return { value: any, done: boolean } } } 형태의 객체를 가지고 있음**
-
-### 이터러블
-
-**이터러블 프로토콜을 준수한 객체를 이터러블이라 한다.**
-
-Array는 Symbol.iterator를 가지고 있다. 따라서 Array는 이터러블 프로토콜을 준수한 이터러블이다.
-
-Array 외에도 Map, Set, String, TypedArray등이 이터러블 프로토콜을 준수한 이터러블이다.
-
-\- Array, String, Map, Set, TypedArray(Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array), DOM data structure(NodeList, HTMLCollection), Arguments
-
-Object, Number, Boolean 등의 일반 객체는 Symbol.iterator 소유하고 있지 않다. 따라서 이터러블 프로토콜을 준수한 이터러블이 아니다.
-
+Array는 대표적인 이터러블 객체로 Object와 비교해보면
 ```javascript
 const arr = [1, 2, 3];
-const str = 'Hello';
-const map = new Map();
-const set = new Set();
-
-const num = 1;
-const bool = false;
-
+const obj = {};
 console.dir(arr.__proto__.hasOwnProperty(Symbol.iterator)); // true
-console.dir(str.__proto__.hasOwnProperty(Symbol.iterator)); // true
-console.dir(map.__proto__.hasOwnProperty(Symbol.iterator)); // true
-console.dir(set.__proto__.hasOwnProperty(Symbol.iterator)); // true
-console.dir(num.__proto__.hasOwnProperty(Symbol.iterator)); // false
-console.dir(bool.__proto__.hasOwnProperty(Symbol.iterator)); // false
+console.dir(obj.__proto__.hasOwnProperty(Symbol.iterator)); // false
+
+for (const a of arr) {
+    console.log(a);
+}
+
+for (const o of obj) {
+    console.log(o);
+}
 ```
 
-### 이터레이터
+output:  
+> true  
+> false  
+> 1  
+> 2  
+> 3  
+> Uncaught TypeError: obj is not iterable
 
-**Symbol.iterator 메소드를 통해 반환 받은 객체를 이터레이터한다. 이 이터레이터는 이터레이터 프로토콜을 준수한다.**
+Object는 Symbol.iterator가 없기 때문에 for..of문을 사용 할 수 없다.
 
+## 이터레이터
+이터레이터 프로토콜을 준수한 객체를 이터레이터라고 한다.
+
+### 이터레이터 프로토콜
+\- 이터러블이 소유한 Symbol.iterator 메소드가 아래의 형태를 반환한다.
 ```javascript
-const arr = [1, 2, 3];
-// 이터러블 프로토콜을 준수한 객체다.
-console.log(Symbol.iterator in arr); // true
+{
+  next() {
+    return {
+      value: any,
+      done: boolean
+    }
+  }
+}
+```
 
-// Symbol.iterator 메소드는 이터레이터를 반환한다.
+대표적인 이터러블 객체인 Array(배열)를 확인해 보면
+```javascript
+// 배열은 이터러블을 준수한 객체다.
+const arr = [1, 2, 3];
+
+// Symbol.iterator 메소는 이터레이터를 반환한다.
 const iterator = arr[Symbol.iterator]();
+
 // 이터레이터 프로토콜을 준수한 객체다.
 console.log('next' in iterator); // true
 console.log('value' in iterator.next()); // true
 console.log('done' in iterator.next()); // true
 ```
 
-### for of 문
-
-내부적으로 이터레이터의 next 메소드를 호출하여 **done이 ture일때 까지 순회하며** 변수에 value값을 할당한다.
-
-[poiemaweb.com/es6-iteration-for-of](https://poiemaweb.com/es6-iteration-for-of)
+#### 참고:  
+>[poiemaweb.com/es6-iteration-for-of](https://poimaweb.com/es6-iteration-for-of)  
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
