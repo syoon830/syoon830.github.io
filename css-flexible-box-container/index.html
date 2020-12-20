@@ -1,0 +1,962 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.949271a724063ba9ca59.css" id="gatsby-global-css">.markdown-body .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1:hover .anchor .octicon-link:before,.markdown-body h2:hover .anchor .octicon-link:before,.markdown-body h3:hover .anchor .octicon-link:before,.markdown-body h4:hover .anchor .octicon-link:before,.markdown-body h5:hover .anchor .octicon-link:before,.markdown-body h6:hover .anchor .octicon-link:before{width:16px;height:16px;content:" ";display:inline-block;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E")}.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body details{display:block}.markdown-body summary{display:list-item}.markdown-body a{background-color:initial}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body strong{font-weight:inherit;font-weight:bolder}.markdown-body h1{margin:.67em 0}.markdown-body img{border-style:none}.markdown-body code,.markdown-body kbd,.markdown-body pre{font-family:monospace,monospace;font-size:1em}.markdown-body hr{box-sizing:initial;overflow:visible}.markdown-body input{font:inherit;margin:0;overflow:visible}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body input{font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body a{color:#0366d6;text-decoration:none}.markdown-body a:hover{text-decoration:underline}.markdown-body strong{font-weight:600}.markdown-body hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border-bottom:1px solid #dfe2e5}.markdown-body hr:after,.markdown-body hr:before{display:table;content:""}.markdown-body hr:after{clear:both}.markdown-body table{border-spacing:0;border-collapse:collapse}.markdown-body td,.markdown-body th{padding:0}.markdown-body details summary{cursor:pointer}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:0;margin-bottom:0}.markdown-body h1{font-size:32px}.markdown-body h1,.markdown-body h2{font-weight:600}.markdown-body h2{font-size:24px}.markdown-body h3{font-size:20px}.markdown-body h3,.markdown-body h4{font-weight:600}.markdown-body h4{font-size:16px}.markdown-body h5{font-size:14px}.markdown-body h5,.markdown-body h6{font-weight:600}.markdown-body h6{font-size:12px}.markdown-body p{margin-top:0;margin-bottom:10px}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding-left:0;margin-top:0;margin-bottom:0}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body dd{margin-left:0}.markdown-body code,.markdown-body pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}.markdown-body pre{margin-top:0;margin-bottom:0}.markdown-body input::-webkit-inner-spin-button,.markdown-body input::-webkit-outer-spin-button{margin:0;-webkit-appearance:none;appearance:none}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .border{border:1px solid #e1e4e8!important}.markdown-body .border-0{border:0!important}.markdown-body .border-bottom{border-bottom:1px solid #e1e4e8!important}.markdown-body .rounded-1{border-radius:3px!important}.markdown-body .bg-white{background-color:#fff!important}.markdown-body .bg-gray-light{background-color:#fafbfc!important}.markdown-body .text-gray-light{color:#6a737d!important}.markdown-body .pl-3,.markdown-body .px-3{padding-left:16px!important}.markdown-body .px-3{padding-right:16px!important}.markdown-body .f6{font-size:12px!important}.markdown-body .lh-condensed{line-height:1.25!important}.markdown-body .text-bold{font-weight:600!important}.markdown-body .pl-c{color:#6a737d}.markdown-body .pl-c1,.markdown-body .pl-s .pl-v{color:#005cc5}.markdown-body .pl-e,.markdown-body .pl-en{color:#6f42c1}.markdown-body .pl-s .pl-s1,.markdown-body .pl-smi{color:#24292e}.markdown-body .pl-ent{color:#22863a}.markdown-body .pl-k{color:#d73a49}.markdown-body .pl-pds,.markdown-body .pl-s,.markdown-body .pl-s .pl-pse .pl-s1,.markdown-body .pl-sr,.markdown-body .pl-sr .pl-cce,.markdown-body .pl-sr .pl-sra,.markdown-body .pl-sr .pl-sre{color:#032f62}.markdown-body .pl-smw,.markdown-body .pl-v{color:#e36209}.markdown-body .pl-bu{color:#b31d28}.markdown-body .pl-ii{color:#fafbfc;background-color:#b31d28}.markdown-body .pl-c2{color:#fafbfc;background-color:#d73a49}.markdown-body .pl-c2:before{content:"^M"}.markdown-body .pl-sr .pl-cce{font-weight:700;color:#22863a}.markdown-body .pl-ml{color:#735c0f}.markdown-body .pl-mh,.markdown-body .pl-mh .pl-en,.markdown-body .pl-ms{font-weight:700;color:#005cc5}.markdown-body .pl-mi{font-style:italic;color:#24292e}.markdown-body .pl-mb{font-weight:700;color:#24292e}.markdown-body .pl-md{color:#b31d28;background-color:#ffeef0}.markdown-body .pl-mi1{color:#22863a;background-color:#f0fff4}.markdown-body .pl-mc{color:#e36209;background-color:#ffebda}.markdown-body .pl-mi2{color:#f6f8fa;background-color:#005cc5}.markdown-body .pl-mdr{font-weight:700;color:#6f42c1}.markdown-body .pl-ba{color:#586069}.markdown-body .pl-sg{color:#959da5}.markdown-body .pl-corl{text-decoration:underline;color:#032f62}.markdown-body .mb-0{margin-bottom:0!important}.markdown-body .my-2{margin-bottom:8px!important;margin-top:8px!important}.markdown-body .pl-0{padding-left:0!important}.markdown-body .py-0{padding-top:0!important;padding-bottom:0!important}.markdown-body .pl-1{padding-left:4px!important}.markdown-body .pl-2{padding-left:8px!important}.markdown-body .py-2{padding-top:8px!important;padding-bottom:8px!important}.markdown-body .pl-3{padding-left:16px!important}.markdown-body .pl-4{padding-left:24px!important}.markdown-body .pl-5{padding-left:32px!important}.markdown-body .pl-6{padding-left:40px!important}.markdown-body .pl-7{padding-left:48px!important}.markdown-body .pl-8{padding-left:64px!important}.markdown-body .pl-9{padding-left:80px!important}.markdown-body .pl-10{padding-left:96px!important}.markdown-body .pl-11{padding-left:112px!important}.markdown-body .pl-12{padding-left:128px!important}.markdown-body hr{border-bottom-color:#eee}.markdown-body kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body blockquote,.markdown-body details,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li{word-wrap:break-all}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:initial;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:initial;border:0}.markdown-body .commit-tease-sha{display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%;color:#444d56}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body .blob-wrapper{overflow-x:auto;overflow-y:hidden}.markdown-body .blob-wrapper-embedded{max-height:240px;overflow-y:auto}.markdown-body .blob-num{width:1%;min-width:50px;padding-right:10px;padding-left:10px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;vertical-align:top;cursor:pointer;-webkit-user-select:none;-ms-user-select:none;user-select:none}.markdown-body .blob-num:hover{color:rgba(27,31,35,.6)}.markdown-body .blob-num:before{content:attr(data-line-number)}.markdown-body .blob-code{position:relative;padding-right:10px;padding-left:10px;line-height:20px;vertical-align:top}.markdown-body .blob-code-inner{overflow:visible;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;color:#24292e;word-wrap:normal;white-space:pre}.markdown-body .pl-token.active,.markdown-body .pl-token:hover{cursor:pointer;background:#ffea7f}.markdown-body .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}.markdown-body .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}.markdown-body .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}.markdown-body .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}.markdown-body .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}.markdown-body .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}.markdown-body .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}.markdown-body .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}.markdown-body .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}.markdown-body .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}.markdown-body .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}.markdown-body .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><meta name="generator" content="Gatsby 2.28.1"/><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-MQ7V225');</script><style data-styled="" data-styled-version="5.2.1">.cTvQJA{width:840px;max-width:100%;background-color:#fff;margin:0 auto;}/*!sc*/
+data-styled.g1[id="Styles__StyledWrap-sc-1s5726o-0"]{content:"cTvQJA,"}/*!sc*/
+.eFkBhU{padding:0 40px;}/*!sc*/
+@media only screen and (max-width:720px){.eFkBhU{padding:0 20px;}}/*!sc*/
+data-styled.g2[id="Styles__StyledContent-sc-1s5726o-1"]{content:"eFkBhU,"}/*!sc*/
+.eXQXBZ h1{padding:20px 0;}/*!sc*/
+.eXQXBZ h1 a{font-size:24px;-webkit-letter-spacing:-0.02em;-moz-letter-spacing:-0.02em;-ms-letter-spacing:-0.02em;letter-spacing:-0.02em;font-family:acumin-pro,sans-serif;}/*!sc*/
+@media only screen and (max-width:720px){.eXQXBZ h1{padding:20px 0;}}/*!sc*/
+data-styled.g3[id="Styles__StyledHeader-sc-1s5726o-2"]{content:"eXQXBZ,"}/*!sc*/
+.dXYSRd .post-header{padding:40px 0 20px;}/*!sc*/
+.dXYSRd .post-header .title{font-size:32px;margin-bottom:10px;}/*!sc*/
+.dXYSRd .post-header .date{font-size:14px;text-align:right;color:#b3aaaa;}/*!sc*/
+data-styled.g6[id="Styles__StyledPost-sc-1s5726o-5"]{content:"dXYSRd,"}/*!sc*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,menu,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,main,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*!sc*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block;}/*!sc*/
+*[hidden]{display:none;}/*!sc*/
+body{line-height:1;}/*!sc*/
+menu,ol,ul{list-style:none;}/*!sc*/
+blockquote,q{quotes:none;}/*!sc*/
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}/*!sc*/
+table{border-collapse:collapse;border-spacing:0;}/*!sc*/
+body{overflow-y:scroll;background-color:#f5f5f5;}/*!sc*/
+body,.markdown-body{font-family:'Noto Sans KR',sans-serif;}/*!sc*/
+a{color:#333;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g8[id="sc-global-dnYoSp1"]{content:"sc-global-dnYoSp1,"}/*!sc*/
+</style><title data-react-helmet="true">CSS Flex Box 정리 - Container | seungyoonkim</title><meta data-react-helmet="true" name="description" content="개발 블로그입니다."/><meta data-react-helmet="true" property="og:title" content="CSS Flex Box 정리 - Container"/><meta data-react-helmet="true" property="og:description" content="개발 블로그입니다."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator"/><meta data-react-helmet="true" name="twitter:title" content="CSS Flex Box 정리 - Container"/><meta data-react-helmet="true" name="twitter:description" content="개발 블로그입니다."/><link as="script" rel="preload" href="/webpack-runtime-8b3f0522399db7daf441.js"/><link as="script" rel="preload" href="/styles-8fab2804fb6f85b824b6.js"/><link as="script" rel="preload" href="/framework-d585a04b7d285a7760d6.js"/><link as="script" rel="preload" href="/app-c834d561fce0470cf14a.js"/><link as="script" rel="preload" href="/022d3153bf09c36cd784dcdb36ffbd187f9c96d7-89c2c391da7b0c1b6d01.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-tsx-add27027019bd91eb349.js"/><link as="fetch" rel="preload" href="/page-data\css-flexible-box-container\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3000541721.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ7V225" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Styles__StyledWrap-sc-1s5726o-0 cTvQJA"><div class="Styles__StyledContent-sc-1s5726o-1 eFkBhU"><header class="Styles__StyledHeader-sc-1s5726o-2 eXQXBZ"><h1><a href="/">seungyoonkim</a></h1></header><div><div class="Styles__StyledPost-sc-1s5726o-5 dXYSRd"><div class="post-header"><div class="title">CSS Flex Box 정리 - Container</div><div class="date">2020.12.17</div></div><div class="markdown-body"><section itemProp="articleBody"><p>오랜만에 퍼블리싱을 하면서 css flex를 사용하는데 확실한 이해를 위해 정리하게 되었다.</p>
+<p>우선 flex는 container와 items으로 나눌 수 있다.<br>
+- container(<code class="language-text">diplay: flex</code>를 선언한 Element)<br>
+- items(container 안에 Element들)</p>
+<h1>Container</h1>
+<p><code class="language-text">display: flex</code>를 선언한 부분으로 바로 아래 있는 자식 Element들을 flexible하게 만들어 준다고 이해하면 된다.</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 2px solid #ccc<span class="token punctuation">;</span>  
+<span class="token punctuation">}</span>
+<span class="token selector">.item-a</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-b</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #0026ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-c</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #fffb00<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7cb9b023dd1c009215b765f67272d3cf/0fcea/default.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 21.51898734177215%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoklEQVQI12P4HhbxX054jn2fVuh/i+DfZiF/Dfz+nz6f/f+/yp9fE//9+//v359/2MCfP38Yfm7c8n/p9Mbk8wzS/5lV/jIp/2OQ+X/gmMP//wx/fgGNAII//7EBsGawVP3k/wxC/5kV/zPJ/2OQ/L//+IL//wv//N4BVvYXt+bvP////7ly82/35L/BuX+Dcv76pv+9fAsk/fv3v7+4AVAzAFEBxER4y6aZAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="default"
+        title="default"
+        src="/static/7cb9b023dd1c009215b765f67272d3cf/f058b/default.png"
+        srcset="/static/7cb9b023dd1c009215b765f67272d3cf/c26ae/default.png 158w,
+/static/7cb9b023dd1c009215b765f67272d3cf/6bdcf/default.png 315w,
+/static/7cb9b023dd1c009215b765f67272d3cf/f058b/default.png 630w,
+/static/7cb9b023dd1c009215b765f67272d3cf/0fcea/default.png 851w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>container(<code class="language-text">diplay: flex</code>를 선언한 객체)에 flex관련 css는 아래와 같다.<br>
+- flex-direction<br>
+- flex-wrap<br>
+- flex-flow<br>
+- justify-content<br>
+- align-items<br>
+- align-content</p>
+<h2>flex-direction</h2>
+<p>items를 어떻게 배치할지 설정하는 속성 (row | row-reverse | column | column-reverse)</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 2px solid #ccc<span class="token punctuation">;</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span> <span class="token comment">/* 기본값은 row */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-a</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-b</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #0026ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-c</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #fffb00<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>flex-direction: row</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7cb9b023dd1c009215b765f67272d3cf/0fcea/flex-direction-row.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 21.51898734177215%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoklEQVQI12P4HhbxX054jn2fVuh/i+DfZiF/Dfz+nz6f/f+/yp9fE//9+//v359/2MCfP38Yfm7c8n/p9Mbk8wzS/5lV/jIp/2OQ+X/gmMP//wx/fgGNAII//7EBsGawVP3k/wxC/5kV/zPJ/2OQ/L//+IL//wv//N4BVvYXt+bvP////7ly82/35L/BuX+Dcv76pv+9fAsk/fv3v7+4AVAzAFEBxER4y6aZAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flex direction row"
+        title="flex direction row"
+        src="/static/7cb9b023dd1c009215b765f67272d3cf/f058b/flex-direction-row.png"
+        srcset="/static/7cb9b023dd1c009215b765f67272d3cf/c26ae/flex-direction-row.png 158w,
+/static/7cb9b023dd1c009215b765f67272d3cf/6bdcf/flex-direction-row.png 315w,
+/static/7cb9b023dd1c009215b765f67272d3cf/f058b/flex-direction-row.png 630w,
+/static/7cb9b023dd1c009215b765f67272d3cf/0fcea/flex-direction-row.png 851w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>flex-direction: row-reverse</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5de43f284b05174f1afdd2615c743a7f/5d72a/flex-direction-row-reverse.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 19.62025316455696%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnElEQVQI12P49+/ffywAJAiU+fXd5f9/hoVrUhmU/3Pp/eXW+cOg+79efdJ/cZ7fdo4MeDT////3909LoOY5y+MZxP4zKf5lUfjLIPm/OuDQ/5by35Om4Nf8//fv+v//Xeatns4g+59J4x+L5n+g5tppYKk//xl+//79Bzf4+ROkbsG6f4xqf3gN//AZ/WFQ/tM06df//z9/fPsJAJhFvXBJuCYxAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flex direction row reverse"
+        title="flex direction row reverse"
+        src="/static/5de43f284b05174f1afdd2615c743a7f/f058b/flex-direction-row-reverse.png"
+        srcset="/static/5de43f284b05174f1afdd2615c743a7f/c26ae/flex-direction-row-reverse.png 158w,
+/static/5de43f284b05174f1afdd2615c743a7f/6bdcf/flex-direction-row-reverse.png 315w,
+/static/5de43f284b05174f1afdd2615c743a7f/f058b/flex-direction-row-reverse.png 630w,
+/static/5de43f284b05174f1afdd2615c743a7f/5d72a/flex-direction-row-reverse.png 834w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>flex-direction: column</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/637ae09a661d4818e4601f73046c0af5/a1dd2/flex-direction-column.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAl0lEQVQY02P4zsDwLTzu27//377+/fv3P/Hgz58/DBMZQqdYTpm84v/kRf9evAaJ/vtHtGYG9f9M6v8ZxP8zSPw/fg4kSqT9YM2Kv9k0/rBo/geiUxdJ1Szzn0n5P4MiCJ24QKLm9TucNuzq3LDn/4Y9/959JNHP//8DUQCYS0pYQzT/+q7y60fpr1//f/36/YcU8OvXLwDtL7YHcXb6gwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flex direction column"
+        title="flex direction column"
+        src="/static/637ae09a661d4818e4601f73046c0af5/f058b/flex-direction-column.png"
+        srcset="/static/637ae09a661d4818e4601f73046c0af5/c26ae/flex-direction-column.png 158w,
+/static/637ae09a661d4818e4601f73046c0af5/6bdcf/flex-direction-column.png 315w,
+/static/637ae09a661d4818e4601f73046c0af5/f058b/flex-direction-column.png 630w,
+/static/637ae09a661d4818e4601f73046c0af5/a1dd2/flex-direction-column.png 838w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>flex-direction: column-reverse</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4846556a1ab7721fb10575c74835b2df/5d72a/flex-direction-column-reverse.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 37.34177215189873%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAlUlEQVQY02P4/1/6/3+G///b/oPAn/9Eg79//zJs35eydrvLhl3r12z/v/cYUIQUzTLWfxjk/jOr/WeQ+q/r9f/nL5DEv3/EaZaz+8Og+JdV6x+Dwn99v/+/SNIs7fyfQeM/s+Z/BvH/uh4k2rxBPnY1g9nalFUrD/zffejv33+k+Pl/Y9n/5ND/B7aCBX79/fuHeAAAyzV3afEyghkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flex direction column reverse"
+        title="flex direction column reverse"
+        src="/static/4846556a1ab7721fb10575c74835b2df/f058b/flex-direction-column-reverse.png"
+        srcset="/static/4846556a1ab7721fb10575c74835b2df/c26ae/flex-direction-column-reverse.png 158w,
+/static/4846556a1ab7721fb10575c74835b2df/6bdcf/flex-direction-column-reverse.png 315w,
+/static/4846556a1ab7721fb10575c74835b2df/f058b/flex-direction-column-reverse.png 630w,
+/static/4846556a1ab7721fb10575c74835b2df/5d72a/flex-direction-column-reverse.png 834w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h2>flex-wrap</h2>
+<p>items가 container 넓이를 넘어 갈 때 처리 여부 (nowrap | wrap | wrap-reverse)  </p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 2px solid #ccc<span class="token punctuation">;</span>
+    <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span> <span class="token comment">/* 기본값은 nowrap */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-a</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-b</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #0026ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-c</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #fffb00<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>flex-wrap: nowrap;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/20b16d1b87b8a03f0d3c5a874ab98f1d/13a9a/flex-wrap-nowrap.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.278481012658226%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVQY0x3PvUvDQBgG8JcmbcWqRUTUflhB0X4N/i9OtZs6KDiIXVxU1GCHaimCrZW2k7R0dXIRMTgoCJ3ETRwcpVPTJHeXPF483uG43z3ve0dGeBJEz+oqxWyKQ11gFMbaVhsg1lf7UUXq8eguzUOJO76EoClc1jelWsYEiXIFxSO90KYVKEkEM5zmkN/vSuaDMK8doKRp6zotIpBy/GlHdml2t6WagwgJB3LpPdCSS8tQ05xmkNvreJOtMSa+pJ7WHIpAScGXdCiG287GfzhEgnFA6G9CJiUHs969fOETOOF2hdu/MqxdO/JHgSz8GZcSaHQfgDNzeEVCuJKfXkHToFmoMdAIcjveczgHF97msAwKQYlCiYDGUb3zDk0LZNsMLvv+YaUGu2iycotpVXb/aAGGZQ0tqWAv7+z8hl22vCrWWe9D6tA0jT92y+D4aHxlkwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flex wrap nowrap"
+        title="flex wrap nowrap"
+        src="/static/20b16d1b87b8a03f0d3c5a874ab98f1d/f058b/flex-wrap-nowrap.png"
+        srcset="/static/20b16d1b87b8a03f0d3c5a874ab98f1d/c26ae/flex-wrap-nowrap.png 158w,
+/static/20b16d1b87b8a03f0d3c5a874ab98f1d/6bdcf/flex-wrap-nowrap.png 315w,
+/static/20b16d1b87b8a03f0d3c5a874ab98f1d/f058b/flex-wrap-nowrap.png 630w,
+/static/20b16d1b87b8a03f0d3c5a874ab98f1d/13a9a/flex-wrap-nowrap.png 637w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>flex-wrap: wrap;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c382c91d1b84e0600d1acd3649609b8c/4597d/flex-wrap-wrap.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABxElEQVQoz2WSz28SQRTHhy4YZakxSGJICqvVpYBQSZOFi/jj4EWaNsEY/wP/Rk8eTTgZL7K6ULQJS9UrYHdn3vs6u0DbtS/fyyTzybz5vCfO+n1l29Rsqnrt3cuPu4do9uTjHuk0DlXtNVrHi89feoAtz+sUtolOiUCkwjAU4cEBhMCNDKfTTnEgLBhlJcrQSVksdnCrMv/q2oCgQECa4DGiYimlkJMJPA+jEXujztFfcR+ZOraqUYwaiwpyrYXrVTfwbfDkCsyM1Qlw3kI/ZVShGZ3UHotHyO4v3O+NGM5A3k3CUq5hhvPmPxgR/ITdk9/AlMgHZoBa3Y/h5RJBoMPngdMnUboG72M41oDSki7INex3u2SaKBQ4f8exPog9GBW62vbNxvLToANsU5CHtMA/L9sOOh0YBnImZ7OONYhhlfzzfPitshG2DT65hNVshqkP3+ep7xyFekLXhM1d7wLOJWCpR76x3da2S0jXot/qbFVZ2DBbS9frAgUKipAV8GnSthbNzMTOMcQ9GA8hHkRJ7ULvTLbOw/Ef7ZnoDPiVsK23jOJSinrvKd+m8gvaeRal9JyKT8l+Rd6P1W3Ei7kuDf4DOnPgHBbu8yMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flex wrap wrap"
+        title="flex wrap wrap"
+        src="/static/c382c91d1b84e0600d1acd3649609b8c/f058b/flex-wrap-wrap.png"
+        srcset="/static/c382c91d1b84e0600d1acd3649609b8c/c26ae/flex-wrap-wrap.png 158w,
+/static/c382c91d1b84e0600d1acd3649609b8c/6bdcf/flex-wrap-wrap.png 315w,
+/static/c382c91d1b84e0600d1acd3649609b8c/f058b/flex-wrap-wrap.png 630w,
+/static/c382c91d1b84e0600d1acd3649609b8c/4597d/flex-wrap-wrap.png 631w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>flex-wrap: wrap-reverse;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e21060ee97f2e6adb7392910664a4cc4/084e2/flex-wrap-wrap-reverse.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByElEQVQoz22SXWsTURCGT7qGTbSCGitKbJPUZJPYxEtB2FTEblV6Kan48RP8kYKl0N7VoCnqatuLWmtSEBP368y8zi4t2RSHl3NzzjMz551RYRgSkdYE6BdvD28+CGsO3Xkcq7pClUfUfEZ9FxJRBCLRaQiotNZywRxf211WczAWocqxMhWoBZh13tkdAD+IjoCfUgNJCKi0ZDuDl19D3Ua2iZl6LKPBGQvmkv9uYwW4QcE8ohp4P2E5hqOTEwyGPBji96DTDQU2GlBWrEydVRW5tvfh4xKgKFCIcuCvE/jQcXQuh2sFXJntVDaVFLT0FNzyev1WCnYncOg4yOe5cB1XL3fKG/+D/d4nG7hEQQFREbw3gfVohPGYR2MEfzrdX9NtI2kbvc8B4BP5cgqWMizlducVVPE8bLZ4pz8EjojE6uNptxPuFH5zDmZVQ/aut7l1H7hAwSyiOfD31J8PDuC67H7Dvrv83FMlec0zDYiMJkuKi/fShuWnDDu2bVaKzRyyyr71XnbDKGlJIcqUWc3DtP6mRmWejYqSOa+v00JJN5qwFl8+3C4+RWM1tFZJVH+iqw7aa97ulzWgFPkWhW3Se8mSalnPf9Y+4K9wZnzsAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flex wrap wrap reverse"
+        title="flex wrap wrap reverse"
+        src="/static/e21060ee97f2e6adb7392910664a4cc4/f058b/flex-wrap-wrap-reverse.png"
+        srcset="/static/e21060ee97f2e6adb7392910664a4cc4/c26ae/flex-wrap-wrap-reverse.png 158w,
+/static/e21060ee97f2e6adb7392910664a4cc4/6bdcf/flex-wrap-wrap-reverse.png 315w,
+/static/e21060ee97f2e6adb7392910664a4cc4/f058b/flex-wrap-wrap-reverse.png 630w,
+/static/e21060ee97f2e6adb7392910664a4cc4/084e2/flex-wrap-wrap-reverse.png 632w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h2>flex-flow</h2>
+<p>위에 설명한 flex-direction과 flex-wrap을 합쳐서 사용할 때 쓰는 속성  </p>
+<h3>flex-flow: (flex-direction) (flex-wrap)</h3>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token comment">/* 예시 */</span>
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token property">flex-flow</span><span class="token punctuation">:</span> column wrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2>justify-content</h2>
+<p>items의 가로 정렬을 정의 할 때 사용 (flex-start | flex-end | center | space-around | space-between)<br>
+센터 정렬 때문에 정말 많이 쓰는 속성이다.   </p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 2px solid #ccc<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span> <span class="token comment">/* 기본값은 flex-start */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-a</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-b</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #0026ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-c</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fffb00<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>justify-content: flex-start</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/65750a1ba4207ca8bf649fd5c14ad48b/1568e/justify-content-flex-start.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.78481012658228%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuUlEQVQY04WOvw7BcBSFb7VsTTpJpCmi0gpLqVcQsVW8AIPBA/kzGQliIB0MBm/hVRq/3+3RNjHR+Iaz3POdXAIRVArsq+LD8KTehdEX1MT+MgUUGamIt0iR+IJQq8NpDKwHmVBNmaRWFaRjd54kVxkR4k2+nDGagywU2yi0UOqIZOIYjj/y+o88nIEqUF0kD2suUxmH8A4shVgBz6wS/5CZGeBgwYrDRo91jw2fyebTLW2/BJhjzuENiDnf6mbXVSAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="justify content flex start"
+        title="justify content flex start"
+        src="/static/65750a1ba4207ca8bf649fd5c14ad48b/f058b/justify-content-flex-start.png"
+        srcset="/static/65750a1ba4207ca8bf649fd5c14ad48b/c26ae/justify-content-flex-start.png 158w,
+/static/65750a1ba4207ca8bf649fd5c14ad48b/6bdcf/justify-content-flex-start.png 315w,
+/static/65750a1ba4207ca8bf649fd5c14ad48b/f058b/justify-content-flex-start.png 630w,
+/static/65750a1ba4207ca8bf649fd5c14ad48b/1568e/justify-content-flex-start.png 892w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>justify-content: flex-end</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/bf0c9d193532a88b5a07fdb917f10846/1568e/justify-content-flex-end.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.78481012658228%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsElEQVQY042MTQsBYRhFbxg2lEmxYfI1PmIxahR/alZCSimZZGJhp/wrP8Z455m53q2GchZ3cescJGmUSsin50UA89jW93BZdqLSJDHdF1rcBBcSKsyBaUT0xL4vzQ6d7sK+o8GsJbBotBWKXB2OWo6e+CZ/RLg+E3UaI2YGLIwValwHf8vLE1Fltkd0aPRjmFydHuQtUnfIb15K27K7Sn4o1ZlUplKbC2z9xDoahnwDBUffF09cWyMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="justify content flex end"
+        title="justify content flex end"
+        src="/static/bf0c9d193532a88b5a07fdb917f10846/f058b/justify-content-flex-end.png"
+        srcset="/static/bf0c9d193532a88b5a07fdb917f10846/c26ae/justify-content-flex-end.png 158w,
+/static/bf0c9d193532a88b5a07fdb917f10846/6bdcf/justify-content-flex-end.png 315w,
+/static/bf0c9d193532a88b5a07fdb917f10846/f058b/justify-content-flex-end.png 630w,
+/static/bf0c9d193532a88b5a07fdb917f10846/1568e/justify-content-flex-end.png 892w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>justify-content: center</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/44708d122abc22bf6871628008e384d2/4ef49/justify-content-center.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.78481012658228%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2UlEQVQY04XNwWrCUBAF0CFpxUJ2KVQkyouR0hpXJYKVguYj+hn9Kl2Wrl3pplAo/QMRxJUk0i6Ki6Yz7/oSMOjKCzOre2YIJsxmZeNxRgSb5s6QurgKpRKi2hW6hR+vk00dIMmuoZc5gZihEuvplB8ijKJZ74WasJWQguUL1eE9rpLELbADvTjFhxRHMPsENXDZgXWHi3uhACpebdMc6/P4A3QDuw1qwQo0eWg87dLvN2Ci5RX4Lbo6x3yUv8xofv9it8cq5uaQ1YhrA+4/S/qTi382D6Ts7wG+49x5BkDPkQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="justify content center"
+        title="justify content center"
+        src="/static/44708d122abc22bf6871628008e384d2/f058b/justify-content-center.png"
+        srcset="/static/44708d122abc22bf6871628008e384d2/c26ae/justify-content-center.png 158w,
+/static/44708d122abc22bf6871628008e384d2/6bdcf/justify-content-center.png 315w,
+/static/44708d122abc22bf6871628008e384d2/f058b/justify-content-center.png 630w,
+/static/44708d122abc22bf6871628008e384d2/4ef49/justify-content-center.png 890w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>justify-content: space-around</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f63cf2e398ec161c3e0826eff6a76b9b/4b446/justify-content-space-around.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 23.417721518987342%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2UlEQVQY03WNQU4CQRBFa0YTwQsQjI6jJBI1s1FcaUC4gWsuaOLaG6gxcYKJGzZ6CJGA011Tz27Cgo0/b1f//RJXlr7RQISi0NkceJ387ha6c06ziKRdsgGVq8NJ9csvm/gUfwIzsenU+n16PcZjnS9C46mskxw5IDmMSJvWBVUVZbNPc4IPZPAtbERjgZd3ts9IumydRqRD+3r9Ocgr83/5eULaQXKS44js07oKn20l/2AP2D32SNjQjTinYeHtQ49Gmg00v9V8qHs3enmni6VarT6UatZo/QeDH92l/myKuAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="justify content space around"
+        title="justify content space around"
+        src="/static/f63cf2e398ec161c3e0826eff6a76b9b/f058b/justify-content-space-around.png"
+        srcset="/static/f63cf2e398ec161c3e0826eff6a76b9b/c26ae/justify-content-space-around.png 158w,
+/static/f63cf2e398ec161c3e0826eff6a76b9b/6bdcf/justify-content-space-around.png 315w,
+/static/f63cf2e398ec161c3e0826eff6a76b9b/f058b/justify-content-space-around.png 630w,
+/static/f63cf2e398ec161c3e0826eff6a76b9b/4b446/justify-content-space-around.png 877w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>justify-content: space-between</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/dce42e69f15a8e72bbd3214fd03a08ed/30c92/justify-content-space-between.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 23.417721518987342%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4UlEQVQY022NPUpDURCFDyb+gKKghUYRgwpKoqBYhEB60SaLCAiuQEG0VGzsRMTeUtyAe1BwC6lS2fnenTuf971ASOEwzMDM+c4RErUa/T4QQwQ/v8lUZ/aAmX3mDtE69y/pSbBYaOzbfqcxxfxItFp0uwwG5cPT7F24Fqlsog2qW2ie28cSDlYs//JchAQ3xFjFwpqza7TGZJOJXab20Ap3z8PkIfyZyNT+L9y7REtUUmad6jZaGCV7qfrB3/E3jx+yscrz5G1XD7bascaJ7Rxb89SW2/b0WtyzbCQkdQj8AYfp4h7+7koeAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="justify content space between"
+        title="justify content space between"
+        src="/static/dce42e69f15a8e72bbd3214fd03a08ed/f058b/justify-content-space-between.png"
+        srcset="/static/dce42e69f15a8e72bbd3214fd03a08ed/c26ae/justify-content-space-between.png 158w,
+/static/dce42e69f15a8e72bbd3214fd03a08ed/6bdcf/justify-content-space-between.png 315w,
+/static/dce42e69f15a8e72bbd3214fd03a08ed/f058b/justify-content-space-between.png 630w,
+/static/dce42e69f15a8e72bbd3214fd03a08ed/30c92/justify-content-space-between.png 874w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h2>align-items</h2>
+<p>items의 세로 정렬을 정의 할 때 사용 (stretch | flex-start | flex-end | center | baseline )<br>
+이 속성 또한 많이 사용 (센터 정렬 시)</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 2px solid #ccc<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> stretch<span class="token punctuation">;</span> <span class="token comment">/* 기본값은 stretch */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-a</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-b</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #0026ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-c</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fffb00<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>align-items: stretch</h3>
+<p>기본 값으로 container 안에 items 높이를 적용 안해도 높이까지 뻗음
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f0310d94938443f459f43c7f63339727/66caf/align-items-stretch.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 16.455696202531648%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmUlEQVQI12XNOw/BABSG4ZPOFkzuIpFo4zpUNyIdVKRLKwYJo3/MxsSkEZEi0XPOh62JZ3/z0jMIUavEVm822dc9mFNuedxwMVqdoosDKct7rvpUhapoCjMT9wcguhuZZm5HRRgFMUpCeVTtQxRloaSJCcT4UaSICCXrDdrWwxkv/GMnxDBgO5SuD397vl1dsCnvperr//yNPykUfof4iu3TAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align items stretch"
+        title="align items stretch"
+        src="/static/f0310d94938443f459f43c7f63339727/f058b/align-items-stretch.png"
+        srcset="/static/f0310d94938443f459f43c7f63339727/c26ae/align-items-stretch.png 158w,
+/static/f0310d94938443f459f43c7f63339727/6bdcf/align-items-stretch.png 315w,
+/static/f0310d94938443f459f43c7f63339727/f058b/align-items-stretch.png 630w,
+/static/f0310d94938443f459f43c7f63339727/66caf/align-items-stretch.png 853w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-items: flex-start</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8cd0c19512605e45cbf87497a0680c32/b2cef/align-items-flex-start.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.822784810126581%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAATklEQVQI152LMQ6AIBDA+P9rEJTFRBY/48hiche4GkhM1NGmQ5e6uiSmQAz7evjMnC1mYo9WygbeWoKTjvHGmQhD1SbKUzMFGX63e+Y/F+uvrK/oELRaAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align items flex start"
+        title="align items flex start"
+        src="/static/8cd0c19512605e45cbf87497a0680c32/f058b/align-items-flex-start.png"
+        srcset="/static/8cd0c19512605e45cbf87497a0680c32/c26ae/align-items-flex-start.png 158w,
+/static/8cd0c19512605e45cbf87497a0680c32/6bdcf/align-items-flex-start.png 315w,
+/static/8cd0c19512605e45cbf87497a0680c32/f058b/align-items-flex-start.png 630w,
+/static/8cd0c19512605e45cbf87497a0680c32/b2cef/align-items-flex-start.png 847w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-items: flex-end</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/49031fd4e25f0a56e601ee7e67924d38/33e10/align-items-flex-end.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.822784810126581%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVQI152Luw5AQBBF90/JxgoSpSgs/lS/vcbMnRmvRuicnNud60Akl8QglqfAMToVyAcAzv6iqo6rxryXEKZ+yUcro4SoxWD1vKXUmWXKrdl696/zDoOzpjLelyoNAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align items flex end"
+        title="align items flex end"
+        src="/static/49031fd4e25f0a56e601ee7e67924d38/f058b/align-items-flex-end.png"
+        srcset="/static/49031fd4e25f0a56e601ee7e67924d38/c26ae/align-items-flex-end.png 158w,
+/static/49031fd4e25f0a56e601ee7e67924d38/6bdcf/align-items-flex-end.png 315w,
+/static/49031fd4e25f0a56e601ee7e67924d38/f058b/align-items-flex-end.png 630w,
+/static/49031fd4e25f0a56e601ee7e67924d38/33e10/align-items-flex-end.png 844w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-items: center</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b22ab227d6fa5bbe90e7f74e522d3ea3/5b481/align-items-center.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.18987341772152%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZ0lEQVQI123DQQ6CMBQA0Z5XQ8AAiUtCQDcc0QPQCi5Yten/HUEXYsLkjVHvv0IQH3RPZN1vVPQoE6uaLKPIh+ZxvnHptejJO8p7HG0LpyRXWNhK/GeSc3y8pmBn3E+KMoOFJyhHvQGK3aU/cknWXAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align items center"
+        title="align items center"
+        src="/static/b22ab227d6fa5bbe90e7f74e522d3ea3/f058b/align-items-center.png"
+        srcset="/static/b22ab227d6fa5bbe90e7f74e522d3ea3/c26ae/align-items-center.png 158w,
+/static/b22ab227d6fa5bbe90e7f74e522d3ea3/6bdcf/align-items-center.png 315w,
+/static/b22ab227d6fa5bbe90e7f74e522d3ea3/f058b/align-items-center.png 630w,
+/static/b22ab227d6fa5bbe90e7f74e522d3ea3/5b481/align-items-center.png 846w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-items: baseline</h3>
+<p>텍스트를 기준으로 정렬
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7320650ec0ab9dbbbeae06fca9006e5f/8bd7c/align-items-baseline.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.822784810126581%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQI12P4kV/4PzPzT05mbPhFw5D/VqG/LUP/mIX8s4n89eDRjP//W//8nPD376e/f////fvnLypg+LNx4/916/6tX7d764sVO/6v2fFv9Y7/q7b/X7Pz76dP+/7/3/jv747//3/8B4F//1EBw38KAABNqJ64ADLkdQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align items baseline"
+        title="align items baseline"
+        src="/static/7320650ec0ab9dbbbeae06fca9006e5f/f058b/align-items-baseline.png"
+        srcset="/static/7320650ec0ab9dbbbeae06fca9006e5f/c26ae/align-items-baseline.png 158w,
+/static/7320650ec0ab9dbbbeae06fca9006e5f/6bdcf/align-items-baseline.png 315w,
+/static/7320650ec0ab9dbbbeae06fca9006e5f/f058b/align-items-baseline.png 630w,
+/static/7320650ec0ab9dbbbeae06fca9006e5f/8bd7c/align-items-baseline.png 845w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h2>align-content</h2>
+<p>justify-content의 세로 버전? 아래 이미지를 통해 어떻게 동작하는지 확인해보자<br>
+stretch | space-between | center | space-around | flex-start | flex-end</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 2px solid #ccc<span class="token punctuation">;</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+  <span class="token property">align-content</span><span class="token punctuation">:</span> stretch<span class="token punctuation">;</span> <span class="token comment">/* 기본값 stretch */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-a</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-b</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #0026ff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item-c</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fffb00<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-a<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-b<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>B<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>C<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>align-content: stretch;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/fc699cf85ce327b1bbfdda5145871c21/5d030/align-content-stretch.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 98.73417721518987%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAABk0lEQVQ4y+3Uy0pbURgF4LXPSdC0A4U2JuaE5JxERbxEFEEH4qytYmuhfQRbqfEyFURRn0C8xEwU24oggmLaUR+hqPECPktzPJfVbLcpHYgIDnW8+P61N5t/o9Tc7GkBVuGjuYcuwmJ2Lk/C53P7tNp+FmJVtRsKdTceiU6ZrmxNlVO3BM/5ADeZdAECAy8OYBI1/Dy9ImPq3hFciHLkAO3hY5nWcnlztILfwE+nJRZ4H/+JdiLOycXcNQ6yqPlBnUK4erDDukCbTPM72QoehmdZqnk4VkArEeP4/JpqZhG+LptdoWeS52iR6fr2WAW/fez4x0Pw4Z34TOHc/7hkWZ7C9bsKj85I7FG/KsK+xo4QmcRvhZc27ndn/7Zj557e+SE4lbrBRkEuncGJBYUDLAo/oEmsBTrMcznaKON/K/kOnmkqPBQpoIl4yezs6k3zCXyhPgMtEztDIxFm7tuXCh6E099vGwma4U+9vyKvGe3h3NJXMmyzwb2wnHSqPN1ONQz0XRqvGOnl9/1ZMmr/qXPskb9xfzUqOsRUZAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align content stretch"
+        title="align content stretch"
+        src="/static/fc699cf85ce327b1bbfdda5145871c21/f058b/align-content-stretch.png"
+        srcset="/static/fc699cf85ce327b1bbfdda5145871c21/c26ae/align-content-stretch.png 158w,
+/static/fc699cf85ce327b1bbfdda5145871c21/6bdcf/align-content-stretch.png 315w,
+/static/fc699cf85ce327b1bbfdda5145871c21/f058b/align-content-stretch.png 630w,
+/static/fc699cf85ce327b1bbfdda5145871c21/5d030/align-content-stretch.png 771w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-content: flex-start;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/40db6f578837c01a013493625870a823/f7616/align-content-flex-start.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 98.73417721518987%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwUlEQVQ4y2P4Ymb2R1r2v4JkvOlGCZf/oib/Kzrm/P8v8vu/8tcrCl+VFf7KK/xTkPG2OCbt8l/I+H/vrLb//4V/fpf4/TOM4Udm5v+w8P+RwR2ZR4NL/wdm/p+1fNv//wH//0f/fBj5Izryf0Tk/8jQyuyroaX//TP+r9667P9//7+/g//+aWD4959M8PfvP4a/f/78//cPiMAAyvz/H4bgQjAmXOrv378MQEyuzaOaRzWPaqa+5t+/f/8hCwA1AgAMfHf0ejKLVQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align content flex start"
+        title="align content flex start"
+        src="/static/40db6f578837c01a013493625870a823/f058b/align-content-flex-start.png"
+        srcset="/static/40db6f578837c01a013493625870a823/c26ae/align-content-flex-start.png 158w,
+/static/40db6f578837c01a013493625870a823/6bdcf/align-content-flex-start.png 315w,
+/static/40db6f578837c01a013493625870a823/f058b/align-content-flex-start.png 630w,
+/static/40db6f578837c01a013493625870a823/f7616/align-content-flex-start.png 766w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-content: flex-end;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e3f9825854393ce418f022a00d9c6367/5e3a3/align-content-flex-end.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAw0lEQVQ4y+2NzwoBURjF70vQpJjM8AQUynIWsyPScO2nRpRGzROYtSzkBSjlFcQreJMp0Qz3z3GVrc1kOec79Vucfn2EMSZSRYlEAamixEzO5Ez+u8wZU1SV6j6ElFJN3wrxa+WcEQmk/Qxy933pDDHq7t1jJ8BghuXmCuEAlD9o7FI4Y9D+2rv0A/Qm2O5OQE9yyl8eiSyLl8ow8mFtlbNRbIPOzyLRJa88I/NWN4VehVmYNg4FG1oLi3APaCwxWNx8A/vfeGVwYyjRAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align content flex end"
+        title="align content flex end"
+        src="/static/e3f9825854393ce418f022a00d9c6367/f058b/align-content-flex-end.png"
+        srcset="/static/e3f9825854393ce418f022a00d9c6367/c26ae/align-content-flex-end.png 158w,
+/static/e3f9825854393ce418f022a00d9c6367/6bdcf/align-content-flex-end.png 315w,
+/static/e3f9825854393ce418f022a00d9c6367/f058b/align-content-flex-end.png 630w,
+/static/e3f9825854393ce418f022a00d9c6367/5e3a3/align-content-flex-end.png 763w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-content: center;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f862898eb410287ac3bf86b11fac4aee/5e3a3/align-content-center.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAu0lEQVQ4y2P4Ty748+cPw6hmemr+9+/ffzACAyjz/38owiP7589vSmz+z/A3IPCfp/d/H6cFkYscs/57JPyv7D7z/7fX/3++f774fovy/e/l99/XrSN2l2v2f5fY/xPmbf3/3+Xfb58/P2MZ/jg4/rO0/m9jNMN7pkHMf4ug/zkNJ/7/tvr/3/b3Z9uv3rb/rez/25rW+W0yjf1v4v+/dcq6//+N//22+fPTnxJn/xtNYUNH8x9ywa9fvwD2aXnlUg6P4gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align content center"
+        title="align content center"
+        src="/static/f862898eb410287ac3bf86b11fac4aee/f058b/align-content-center.png"
+        srcset="/static/f862898eb410287ac3bf86b11fac4aee/c26ae/align-content-center.png 158w,
+/static/f862898eb410287ac3bf86b11fac4aee/6bdcf/align-content-center.png 315w,
+/static/f862898eb410287ac3bf86b11fac4aee/f058b/align-content-center.png 630w,
+/static/f862898eb410287ac3bf86b11fac4aee/5e3a3/align-content-center.png 763w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-content: space-between;</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f5f5ed99089b5ccd00b3423ba8780956/bbb77/align-content-space-between.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzElEQVQ4y+2UTQrCMBBGcz0t+ANRcCUKihvBhSsPoDcQQa8gXkLv4CGSZlLTWNumn7X+rtVlh9m9ect5LJjNkloDvLrtbioTNEeYLo6RbSHlseXhmKf1Nri36u+8CWoDzJcHuHoacxd3WKIUpIQU1jeCIBXolAAy3wzSkYS4UePbnAqFwFwAURz4zGUZvh3mnCvlUi7l/8o/vaTWIAKpSJ9VANI4mRSgxwZ0p1ZHOVUaoY2fVLOPDK3fGQqLDIXcvDLUKzI0zDO0f2XoCmBMerg9hAiRAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align content space between"
+        title="align content space between"
+        src="/static/f5f5ed99089b5ccd00b3423ba8780956/f058b/align-content-space-between.png"
+        srcset="/static/f5f5ed99089b5ccd00b3423ba8780956/c26ae/align-content-space-between.png 158w,
+/static/f5f5ed99089b5ccd00b3423ba8780956/6bdcf/align-content-space-between.png 315w,
+/static/f5f5ed99089b5ccd00b3423ba8780956/f058b/align-content-space-between.png 630w,
+/static/f5f5ed99089b5ccd00b3423ba8780956/bbb77/align-content-space-between.png 765w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>align-content: space-around</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5abdbda6a9fdeb93e27daa82dbb94f6b/5e3a3/align-content-space-around.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAABCUlEQVQ4y9WUzUsDMRDF84drtRI9qSCCsOi1y25a02JLV3dBRMUi+IEHFXqueNGjyiaTeY700EvxsCsFX97M5REYJj+inHNUVUoKVaV8WcJ7cZBDEFNgwE/N5H9JVUB1qa+iQOcQ1jz3H0yBdobT0TuTBWwg63PLnS5sej8YS2qGuLx5BQxzF2zVRxRxcw16+XzzpBFhdRf76SQ4DWjp5Z7m5gb00nD7StKVHbSOxkCDaR1B1xu71sJqPdU/vTxnYbQYwmaQbOVTSA7MJHgN/oHEzSAZzYHkM8uQpDCtx95dfIxkgPziLZARBqW7zHDSlvS29yRp3MfZ9QsQg9tg8+eE0WIIq/MNfQNqWXKYu6rA1gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="align content space around"
+        title="align content space around"
+        src="/static/5abdbda6a9fdeb93e27daa82dbb94f6b/f058b/align-content-space-around.png"
+        srcset="/static/5abdbda6a9fdeb93e27daa82dbb94f6b/c26ae/align-content-space-around.png 158w,
+/static/5abdbda6a9fdeb93e27daa82dbb94f6b/6bdcf/align-content-space-around.png 315w,
+/static/5abdbda6a9fdeb93e27daa82dbb94f6b/f058b/align-content-space-around.png 630w,
+/static/5abdbda6a9fdeb93e27daa82dbb94f6b/5e3a3/align-content-space-around.png 763w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p></section></div><div></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/css-flexible-box-container/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-092c4c6a41bb38cca3d9.js"],"app":["/app-c834d561fce0470cf14a.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-f3165a366871227bcb87.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-4f4dc8d9b49c7c475d4d.js"],"component---src-templates-blog-post-tsx":["/component---src-templates-blog-post-tsx-add27027019bd91eb349.js"]};/*]]>*/</script><script src="/polyfill-092c4c6a41bb38cca3d9.js" nomodule=""></script><script src="/component---src-templates-blog-post-tsx-add27027019bd91eb349.js" async=""></script><script src="/022d3153bf09c36cd784dcdb36ffbd187f9c96d7-89c2c391da7b0c1b6d01.js" async=""></script><script src="/app-c834d561fce0470cf14a.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/styles-8fab2804fb6f85b824b6.js" async=""></script><script src="/webpack-runtime-8b3f0522399db7daf441.js" async=""></script></body></html>
